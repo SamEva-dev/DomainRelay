@@ -1,0 +1,14 @@
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\bin\Debug\net8.0\DomainRelay.Abstractions.deps.json
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\bin\Debug\net8.0\DomainRelay.Abstractions.dll
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\bin\Debug\net8.0\DomainRelay.Abstractions.pdb
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\bin\Debug\net8.0\DomainRelay.Abstractions.xml
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\obj\Debug\net8.0\DomainRelay.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\obj\Debug\net8.0\DomainRelay.Abstractions.AssemblyInfoInputs.cache
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\obj\Debug\net8.0\DomainRelay.Abstractions.AssemblyInfo.cs
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\obj\Debug\net8.0\DomainRelay.Abstractions.csproj.CoreCompileInputs.cache
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\obj\Debug\net8.0\DomainRelay.Abstractions.sourcelink.json
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\obj\Debug\net8.0\DomainRelay.Abstractions.dll
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\obj\Debug\net8.0\refint\DomainRelay.Abstractions.dll
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\obj\Debug\net8.0\DomainRelay.Abstractions.xml
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\obj\Debug\net8.0\DomainRelay.Abstractions.pdb
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Abstractions\obj\Debug\net8.0\ref\DomainRelay.Abstractions.dll

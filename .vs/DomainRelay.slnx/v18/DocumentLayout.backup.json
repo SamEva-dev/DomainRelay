@@ -1,0 +1,630 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Gestion immobilier V0\\DomainRelay\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|E:\\Gestion immobilier V0\\DomainRelay\\utilisation.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|solutionrelative:utilisation.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Transport.RabbitMQ\\RabbitMqOutboxPublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\DomainRelay.Transport.RabbitMQ\\RabbitMqOutboxPublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|E:\\Gestion immobilier V0\\DomainRelay\\use.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|solutionrelative:use.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BE06F0A-AB41-D361-3326-61F304E1EB17}|src\\DomainRelay.Abstractions\\DomainRelay.Abstractions.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.abstractions\\abstractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE06F0A-AB41-D361-3326-61F304E1EB17}|src\\DomainRelay.Abstractions\\DomainRelay.Abstractions.csproj|solutionrelative:src\\domainrelay.abstractions\\abstractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|E:\\Gestion immobilier V0\\DomainRelay\\getting-started.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|solutionrelative:getting-started.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|E:\\Gestion immobilier V0\\DomainRelay\\migration-from-mediatr.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|solutionrelative:migration-from-mediatr.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{571713D3-F9D1-1B61-985F-D3C9B8A6E025}|src\\DomainRelay.DependencyInjection\\DomainRelay.DependencyInjection.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.dependencyinjection\\options\\domainrelayregistrationoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{571713D3-F9D1-1B61-985F-D3C9B8A6E025}|src\\DomainRelay.DependencyInjection\\DomainRelay.DependencyInjection.csproj|solutionrelative:src\\domainrelay.dependencyinjection\\options\\domainrelayregistrationoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{571713D3-F9D1-1B61-985F-D3C9B8A6E025}|src\\DomainRelay.DependencyInjection\\DomainRelay.DependencyInjection.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.dependencyinjection\\scanning\\assemblyscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{571713D3-F9D1-1B61-985F-D3C9B8A6E025}|src\\DomainRelay.DependencyInjection\\DomainRelay.DependencyInjection.csproj|solutionrelative:src\\domainrelay.dependencyinjection\\scanning\\assemblyscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DD38573-CA05-679B-FB01-6B3704544CE6}|src\\DomainRelay.Diagnostics\\DomainRelay.Diagnostics.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.diagnostics\\behaviors\\diagnosticsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DD38573-CA05-679B-FB01-6B3704544CE6}|src\\DomainRelay.Diagnostics\\DomainRelay.Diagnostics.csproj|solutionrelative:src\\domainrelay.diagnostics\\behaviors\\diagnosticsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DD38573-CA05-679B-FB01-6B3704544CE6}|src\\DomainRelay.Diagnostics\\DomainRelay.Diagnostics.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.diagnostics\\diagnostics\\domainrelayactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DD38573-CA05-679B-FB01-6B3704544CE6}|src\\DomainRelay.Diagnostics\\DomainRelay.Diagnostics.csproj|solutionrelative:src\\domainrelay.diagnostics\\diagnostics\\domainrelayactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12A3A25-03E9-D11B-5B3E-1637F0C5D9DE}|src\\DomainRelay.Validation\\DomainRelay.Validation.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.validation\\behaviors\\fluentvalidationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12A3A25-03E9-D11B-5B3E-1637F0C5D9DE}|src\\DomainRelay.Validation\\DomainRelay.Validation.csproj|solutionrelative:src\\domainrelay.validation\\behaviors\\fluentvalidationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADE56227-0124-651B-F5D1-DBEC636A9200}|src\\DomainRelay.EFCore\\DomainRelay.EFCore.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.efcore\\behaviors\\transactionbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADE56227-0124-651B-F5D1-DBEC636A9200}|src\\DomainRelay.EFCore\\DomainRelay.EFCore.csproj|solutionrelative:src\\domainrelay.efcore\\behaviors\\transactionbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|E:\\Gestion immobilier V0\\DomainRelay\\validation.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|solutionrelative:validation.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|E:\\Gestion immobilier V0\\DomainRelay\\efcore.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|solutionrelative:efcore.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|E:\\Gestion immobilier V0\\DomainRelay\\diagnostics.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|solutionrelative:diagnostics.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|E:\\Gestion immobilier V0\\DomainRelay\\notifications.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|solutionrelative:notifications.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|E:\\Gestion immobilier V0\\DomainRelay\\pipelines.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{208BA388-4CEE-2CBF-559C-5607C099C1F8}|docs{208BA388-4CEE-2CBF-559C-5607C099C1F8}|solutionrelative:pipelines.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB912D1B-BF2B-FBA8-AAF9-0C9006295A19}|tests\\DomainRelay.Tests\\DomainRelay.Tests.csproj|e:\\gestion immobilier v0\\domainrelay\\tests\\domainrelay.tests\\discanning_tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB912D1B-BF2B-FBA8-AAF9-0C9006295A19}|tests\\DomainRelay.Tests\\DomainRelay.Tests.csproj|solutionrelative:tests\\domainrelay.tests\\discanning_tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB912D1B-BF2B-FBA8-AAF9-0C9006295A19}|tests\\DomainRelay.Tests\\DomainRelay.Tests.csproj|e:\\gestion immobilier v0\\domainrelay\\tests\\domainrelay.tests\\publish_tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB912D1B-BF2B-FBA8-AAF9-0C9006295A19}|tests\\DomainRelay.Tests\\DomainRelay.Tests.csproj|solutionrelative:tests\\domainrelay.tests\\publish_tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB912D1B-BF2B-FBA8-AAF9-0C9006295A19}|tests\\DomainRelay.Tests\\DomainRelay.Tests.csproj|e:\\gestion immobilier v0\\domainrelay\\tests\\domainrelay.tests\\mediator_pipeline_tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB912D1B-BF2B-FBA8-AAF9-0C9006295A19}|tests\\DomainRelay.Tests\\DomainRelay.Tests.csproj|solutionrelative:tests\\domainrelay.tests\\mediator_pipeline_tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB912D1B-BF2B-FBA8-AAF9-0C9006295A19}|tests\\DomainRelay.Tests\\DomainRelay.Tests.csproj|e:\\gestion immobilier v0\\domainrelay\\tests\\domainrelay.tests\\mediator_send_tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB912D1B-BF2B-FBA8-AAF9-0C9006295A19}|tests\\DomainRelay.Tests\\DomainRelay.Tests.csproj|solutionrelative:tests\\domainrelay.tests\\mediator_send_tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADE56227-0124-651B-F5D1-DBEC636A9200}|src\\DomainRelay.EFCore\\DomainRelay.EFCore.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.efcore\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADE56227-0124-651B-F5D1-DBEC636A9200}|src\\DomainRelay.EFCore\\DomainRelay.EFCore.csproj|solutionrelative:src\\domainrelay.efcore\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12A3A25-03E9-D11B-5B3E-1637F0C5D9DE}|src\\DomainRelay.Validation\\DomainRelay.Validation.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.validation\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E12A3A25-03E9-D11B-5B3E-1637F0C5D9DE}|src\\DomainRelay.Validation\\DomainRelay.Validation.csproj|solutionrelative:src\\domainrelay.validation\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DD38573-CA05-679B-FB01-6B3704544CE6}|src\\DomainRelay.Diagnostics\\DomainRelay.Diagnostics.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.diagnostics\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DD38573-CA05-679B-FB01-6B3704544CE6}|src\\DomainRelay.Diagnostics\\DomainRelay.Diagnostics.csproj|solutionrelative:src\\domainrelay.diagnostics\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{571713D3-F9D1-1B61-985F-D3C9B8A6E025}|src\\DomainRelay.DependencyInjection\\DomainRelay.DependencyInjection.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.dependencyinjection\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{571713D3-F9D1-1B61-985F-D3C9B8A6E025}|src\\DomainRelay.DependencyInjection\\DomainRelay.DependencyInjection.csproj|solutionrelative:src\\domainrelay.dependencyinjection\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BE06F0A-AB41-D361-3326-61F304E1EB17}|src\\DomainRelay.Abstractions\\DomainRelay.Abstractions.csproj|e:\\gestion immobilier v0\\domainrelay\\src\\domainrelay.abstractions\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE06F0A-AB41-D361-3326-61F304E1EB17}|src\\DomainRelay.Abstractions\\DomainRelay.Abstractions.csproj|solutionrelative:src\\domainrelay.abstractions\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Transport.RabbitMQ\\Routing\\IOutboxRouter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\DomainRelay.Transport.RabbitMQ\\Routing\\IOutboxRouter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\rabbitmq.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:rabbitmq.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\outbox-ops.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:outbox-ops.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Mediator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DomainRelay\\Mediator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Options\\DomainRelayOptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DomainRelay\\Options\\DomainRelayOptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Internal\\NotificationHandlerWrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DomainRelay\\Internal\\NotificationHandlerWrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Internal\\RequestHandlerWrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DomainRelay\\Internal\\RequestHandlerWrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Internal\\TypeNameCache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DomainRelay\\Internal\\TypeNameCache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Publish\\PublishStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DomainRelay\\Publish\\PublishStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Publish\\SequentialPublishStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DomainRelay\\Publish\\SequentialPublishStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Publish\\ParallelPublishStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DomainRelay\\Publish\\ParallelPublishStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Exceptions\\DomainRelayException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DomainRelay\\Exceptions\\DomainRelayException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "utilisation.md",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\utilisation.md",
+              "RelativeDocumentMoniker": "utilisation.md",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\utilisation.md",
+              "RelativeToolTip": "utilisation.md",
+              "ViewState": "AgIAAPYBAAAAAAAAAAAmwGYCAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-31T21:58:46.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RabbitMqOutboxPublisher.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Transport.RabbitMQ\\RabbitMqOutboxPublisher.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.Transport.RabbitMQ\\RabbitMqOutboxPublisher.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Transport.RabbitMQ\\RabbitMqOutboxPublisher.cs",
+              "RelativeToolTip": "src\\DomainRelay.Transport.RabbitMQ\\RabbitMqOutboxPublisher.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwC8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T21:20:02.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IOutboxRouter.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Transport.RabbitMQ\\Routing\\IOutboxRouter.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.Transport.RabbitMQ\\Routing\\IOutboxRouter.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Transport.RabbitMQ\\Routing\\IOutboxRouter.cs",
+              "RelativeToolTip": "src\\DomainRelay.Transport.RabbitMQ\\Routing\\IOutboxRouter.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAcwAQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T21:18:22.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "rabbitmq.md",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\rabbitmq.md",
+              "RelativeDocumentMoniker": "rabbitmq.md",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\rabbitmq.md",
+              "RelativeToolTip": "rabbitmq.md",
+              "ViewState": "AgIAABoAAAAAAAAAAAAmwIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-31T20:51:33.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "outbox-ops.md",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\outbox-ops.md",
+              "RelativeDocumentMoniker": "outbox-ops.md",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\outbox-ops.md",
+              "RelativeToolTip": "outbox-ops.md",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAmwEsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-31T20:37:40.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "use.md",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\use.md",
+              "RelativeDocumentMoniker": "use.md",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\use.md",
+              "RelativeToolTip": "use.md",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAYwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-31T18:16:19.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Abstractions.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Abstractions\\Abstractions.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.Abstractions\\Abstractions.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Abstractions\\Abstractions.cs",
+              "RelativeToolTip": "src\\DomainRelay.Abstractions\\Abstractions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:22:34.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Mediator.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Mediator.cs",
+              "RelativeDocumentMoniker": "DomainRelay\\Mediator.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Mediator.cs",
+              "RelativeToolTip": "DomainRelay\\Mediator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:22:06.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DomainRelayOptions.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Options\\DomainRelayOptions.cs",
+              "RelativeDocumentMoniker": "DomainRelay\\Options\\DomainRelayOptions.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Options\\DomainRelayOptions.cs",
+              "RelativeToolTip": "DomainRelay\\Options\\DomainRelayOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:21:51.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "getting-started.md",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\getting-started.md",
+              "RelativeDocumentMoniker": "getting-started.md",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\getting-started.md",
+              "RelativeToolTip": "getting-started.md",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAcwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-31T14:55:14.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "NotificationHandlerWrapper.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Internal\\NotificationHandlerWrapper.cs",
+              "RelativeDocumentMoniker": "DomainRelay\\Internal\\NotificationHandlerWrapper.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Internal\\NotificationHandlerWrapper.cs",
+              "RelativeToolTip": "DomainRelay\\Internal\\NotificationHandlerWrapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:21:20.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "RequestHandlerWrapper.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Internal\\RequestHandlerWrapper.cs",
+              "RelativeDocumentMoniker": "DomainRelay\\Internal\\RequestHandlerWrapper.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Internal\\RequestHandlerWrapper.cs",
+              "RelativeToolTip": "DomainRelay\\Internal\\RequestHandlerWrapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:21:34.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "migration-from-mediatr.md",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\migration-from-mediatr.md",
+              "RelativeDocumentMoniker": "migration-from-mediatr.md",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\migration-from-mediatr.md",
+              "RelativeToolTip": "migration-from-mediatr.md",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-31T14:57:13.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TypeNameCache.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Internal\\TypeNameCache.cs",
+              "RelativeDocumentMoniker": "DomainRelay\\Internal\\TypeNameCache.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Internal\\TypeNameCache.cs",
+              "RelativeToolTip": "DomainRelay\\Internal\\TypeNameCache.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:21:04.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PublishStrategy.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Publish\\PublishStrategy.cs",
+              "RelativeDocumentMoniker": "DomainRelay\\Publish\\PublishStrategy.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Publish\\PublishStrategy.cs",
+              "RelativeToolTip": "DomainRelay\\Publish\\PublishStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:20:49.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "SequentialPublishStrategy.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Publish\\SequentialPublishStrategy.cs",
+              "RelativeDocumentMoniker": "DomainRelay\\Publish\\SequentialPublishStrategy.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Publish\\SequentialPublishStrategy.cs",
+              "RelativeToolTip": "DomainRelay\\Publish\\SequentialPublishStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:20:34.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ParallelPublishStrategy.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Publish\\ParallelPublishStrategy.cs",
+              "RelativeDocumentMoniker": "DomainRelay\\Publish\\ParallelPublishStrategy.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Publish\\ParallelPublishStrategy.cs",
+              "RelativeToolTip": "DomainRelay\\Publish\\ParallelPublishStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:20:19.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DomainRelayException.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Exceptions\\DomainRelayException.cs",
+              "RelativeDocumentMoniker": "DomainRelay\\Exceptions\\DomainRelayException.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\Exceptions\\DomainRelayException.cs",
+              "RelativeToolTip": "DomainRelay\\Exceptions\\DomainRelayException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:20:03.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DomainRelayRegistrationOptions.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.DependencyInjection\\Options\\DomainRelayRegistrationOptions.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.DependencyInjection\\Options\\DomainRelayRegistrationOptions.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.DependencyInjection\\Options\\DomainRelayRegistrationOptions.cs",
+              "RelativeToolTip": "src\\DomainRelay.DependencyInjection\\Options\\DomainRelayRegistrationOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:13:57.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AssemblyScanner.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.DependencyInjection\\Scanning\\AssemblyScanner.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.DependencyInjection\\Scanning\\AssemblyScanner.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.DependencyInjection\\Scanning\\AssemblyScanner.cs",
+              "RelativeToolTip": "src\\DomainRelay.DependencyInjection\\Scanning\\AssemblyScanner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:13:43.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DiagnosticsBehavior.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Diagnostics\\Behaviors\\DiagnosticsBehavior.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.Diagnostics\\Behaviors\\DiagnosticsBehavior.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Diagnostics\\Behaviors\\DiagnosticsBehavior.cs",
+              "RelativeToolTip": "src\\DomainRelay.Diagnostics\\Behaviors\\DiagnosticsBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:00:49.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DomainRelayActivity.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Diagnostics\\Diagnostics\\DomainRelayActivity.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.Diagnostics\\Diagnostics\\DomainRelayActivity.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Diagnostics\\Diagnostics\\DomainRelayActivity.cs",
+              "RelativeToolTip": "src\\DomainRelay.Diagnostics\\Diagnostics\\DomainRelayActivity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:00:33.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FluentValidationBehavior.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Validation\\Behaviors\\FluentValidationBehavior.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.Validation\\Behaviors\\FluentValidationBehavior.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Validation\\Behaviors\\FluentValidationBehavior.cs",
+              "RelativeToolTip": "src\\DomainRelay.Validation\\Behaviors\\FluentValidationBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:59:07.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TransactionBehavior.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.EFCore\\Behaviors\\TransactionBehavior.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.EFCore\\Behaviors\\TransactionBehavior.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.EFCore\\Behaviors\\TransactionBehavior.cs",
+              "RelativeToolTip": "src\\DomainRelay.EFCore\\Behaviors\\TransactionBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:58:15.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "validation.md",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\validation.md",
+              "RelativeDocumentMoniker": "validation.md",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\validation.md",
+              "RelativeToolTip": "validation.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-31T14:56:57.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "efcore.md",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\efcore.md",
+              "RelativeDocumentMoniker": "efcore.md",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\efcore.md",
+              "RelativeToolTip": "efcore.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-31T14:56:41.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "diagnostics.md",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\diagnostics.md",
+              "RelativeDocumentMoniker": "diagnostics.md",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\diagnostics.md",
+              "RelativeToolTip": "diagnostics.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-31T14:56:21.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "notifications.md",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\notifications.md",
+              "RelativeDocumentMoniker": "notifications.md",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\notifications.md",
+              "RelativeToolTip": "notifications.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-31T14:55:58.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "pipelines.md",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\pipelines.md",
+              "RelativeDocumentMoniker": "pipelines.md",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\pipelines.md",
+              "RelativeToolTip": "pipelines.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-31T14:55:39.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DiScanning_Tests.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\tests\\DomainRelay.Tests\\DiScanning_Tests.cs",
+              "RelativeDocumentMoniker": "tests\\DomainRelay.Tests\\DiScanning_Tests.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\tests\\DomainRelay.Tests\\DiScanning_Tests.cs",
+              "RelativeToolTip": "tests\\DomainRelay.Tests\\DiScanning_Tests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:54:52.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Publish_Tests.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\tests\\DomainRelay.Tests\\Publish_Tests.cs",
+              "RelativeDocumentMoniker": "tests\\DomainRelay.Tests\\Publish_Tests.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\tests\\DomainRelay.Tests\\Publish_Tests.cs",
+              "RelativeToolTip": "tests\\DomainRelay.Tests\\Publish_Tests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:54:35.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Mediator_Pipeline_Tests.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\tests\\DomainRelay.Tests\\Mediator_Pipeline_Tests.cs",
+              "RelativeDocumentMoniker": "tests\\DomainRelay.Tests\\Mediator_Pipeline_Tests.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\tests\\DomainRelay.Tests\\Mediator_Pipeline_Tests.cs",
+              "RelativeToolTip": "tests\\DomainRelay.Tests\\Mediator_Pipeline_Tests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:54:22.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Mediator_Send_Tests.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\tests\\DomainRelay.Tests\\Mediator_Send_Tests.cs",
+              "RelativeDocumentMoniker": "tests\\DomainRelay.Tests\\Mediator_Send_Tests.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\tests\\DomainRelay.Tests\\Mediator_Send_Tests.cs",
+              "RelativeToolTip": "tests\\DomainRelay.Tests\\Mediator_Send_Tests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:53:39.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.EFCore\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.EFCore\\ServiceCollectionExtensions.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.EFCore\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "src\\DomainRelay.EFCore\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:51:45.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Validation\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.Validation\\ServiceCollectionExtensions.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Validation\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "src\\DomainRelay.Validation\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:51:08.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Diagnostics\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.Diagnostics\\ServiceCollectionExtensions.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Diagnostics\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "src\\DomainRelay.Diagnostics\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:50:34.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.DependencyInjection\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.DependencyInjection\\ServiceCollectionExtensions.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.DependencyInjection\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "src\\DomainRelay.DependencyInjection\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:49:56.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Unit.cs",
+              "DocumentMoniker": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Abstractions\\Unit.cs",
+              "RelativeDocumentMoniker": "src\\DomainRelay.Abstractions\\Unit.cs",
+              "ToolTip": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Abstractions\\Unit.cs",
+              "RelativeToolTip": "src\\DomainRelay.Abstractions\\Unit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:48:45.656Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

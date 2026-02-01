@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DomainRelay</name>
+    </assembly>
+    <members>
+        <member name="T:DomainRelay.Options.DomainRelayOptions">
+            <summary>
+            Global options for DomainRelay runtime behavior.
+            </summary>
+        </member>
+        <member name="P:DomainRelay.Options.DomainRelayOptions.PublishStrategy">
+            <summary>
+            Publish strategy used by <see cref="M:DomainRelay.Abstractions.IMediator.Publish``1(``0,System.Threading.CancellationToken)"/>.
+            </summary>
+        </member>
+        <member name="P:DomainRelay.Options.DomainRelayOptions.WrapExceptions">
+            <summary>
+            If true, wraps exceptions with a DomainRelayException for consistent error surface.
+            </summary>
+        </member>
+        <member name="F:DomainRelay.Publish.ParallelPublishErrorMode.WaitAllAggregate">
+            <summary>Wait for all handlers; throw AggregateException if any failed.</summary>
+        </member>
+        <member name="F:DomainRelay.Publish.ParallelPublishErrorMode.FailFast">
+            <summary>Fail fast (first exception). Remaining tasks may still run.</summary>
+        </member>
+    </members>
+</doc>

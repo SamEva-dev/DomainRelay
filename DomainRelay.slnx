@@ -1,0 +1,25 @@
+<Solution>
+  <Folder Name="/docs/">
+    <File Path="diagnostics.md" />
+    <File Path="efcore-outbox.md" />
+    <File Path="efcore.md" />
+    <File Path="getting-started.md" />
+    <File Path="migration-from-mediatr.md" />
+    <File Path="notifications.md" />
+    <File Path="pipelines.md" />
+    <File Path="use.md" />
+    <File Path="utilisation.md" />
+    <File Path="validation.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/DomainRelay.Abstractions/DomainRelay.Abstractions.csproj" />
+    <Project Path="src/DomainRelay.DependencyInjection/DomainRelay.DependencyInjection.csproj" />
+    <Project Path="src/DomainRelay.Diagnostics/DomainRelay.Diagnostics.csproj" />
+    <Project Path="src/DomainRelay.EFCore/DomainRelay.EFCore.csproj" />
+    <Project Path="src/DomainRelay.Validation/DomainRelay.Validation.csproj" />
+    <Project Path="src/DomainRelay/DomainRelay.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DomainRelay.Tests/DomainRelay.Tests.csproj" />
+  </Folder>
+</Solution>

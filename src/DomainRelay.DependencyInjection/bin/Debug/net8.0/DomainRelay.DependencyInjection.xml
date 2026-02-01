@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DomainRelay.DependencyInjection</name>
+    </assembly>
+    <members>
+        <member name="P:DomainRelay.DependencyInjection.Options.DomainRelayRegistrationOptions.EnableAssemblyScanning">
+            <summary>
+            When true, scan types in assemblies to register IRequestHandler, INotificationHandler, IPipelineBehavior.
+            </summary>
+        </member>
+    </members>
+</doc>

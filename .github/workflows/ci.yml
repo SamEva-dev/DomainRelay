@@ -1,0 +1,32 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            9.0.x
+
+      - name: Restore
+        run: dotnet restore DomainRelay.sln
+
+      - name: Build
+        run: dotnet build DomainRelay.sln -c Release --no-restore /p:VersionSuffix=alpha.${{ github.run_number }}
+
+      - name: Test
+        run: dotnet test DomainRelay.sln -c Release --no-build --verbosity normal

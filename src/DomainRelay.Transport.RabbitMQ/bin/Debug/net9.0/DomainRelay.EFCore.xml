@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DomainRelay.EFCore</name>
+    </assembly>
+    <members>
+        <member name="T:DomainRelay.EFCore.Abstractions.IDomainRelayDbContextResolver">
+            <summary>
+            Resolves which DbContext should be used for a given request type.
+            Enables multi-DbContext transaction behavior.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.EFCore.DomainEvents.IDomainEvent">
+            <summary>
+            Marker interface for domain events to be persisted to the Outbox.
+            </summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.DomainEvents.IDomainEvent.EventId">
+            <summary>Unique event id for idempotency.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.DomainEvents.IDomainEvent.OccurredOnUtc">
+            <summary>When the event occurred (UTC).</summary>
+        </member>
+        <member name="T:DomainRelay.EFCore.DomainEvents.IHasDomainEvents">
+            <summary>
+            Implemented by aggregate roots/entities that produce domain events.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.EFCore.Outbox.Abstractions.IOutboxPublisher">
+            <summary>
+            Transport abstraction. You implement this to publish events to your bus
+            (RabbitMQ, Kafka, HTTP webhook, SignalR, etc.)
+            </summary>
+        </member>
+        <member name="T:DomainRelay.EFCore.Outbox.Abstractions.IOutboxTypeRegistry">
+            <summary>
+            Allowlist mapping from TypeKey -> CLR Type, to safely deserialize payloads.
+            </summary>
+        </member>
+        <member name="M:DomainRelay.EFCore.Outbox.Admin.IOutboxAdmin.GetDeadLettersAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>Returns the most recent dead-letter messages (IDs + metadata).</summary>
+        </member>
+        <member name="M:DomainRelay.EFCore.Outbox.Admin.IOutboxAdmin.RequeueAsync(System.Collections.Generic.IReadOnlyList{System.Guid},System.Boolean,System.Threading.CancellationToken)">
+            <summary>Requeue message(s) back to Pending state and eligible immediately.</summary>
+        </member>
+        <member name="M:DomainRelay.EFCore.Outbox.Admin.IOutboxAdmin.PurgeProcessedOlderThanAsync(System.DateTime,System.Threading.CancellationToken)">
+            <summary>Purge processed messages older than cutoff.</summary>
+        </member>
+        <member name="M:DomainRelay.EFCore.Outbox.Admin.IOutboxAdmin.DeleteByIdsAsync(System.Collections.Generic.IReadOnlyList{System.Guid},System.Threading.CancellationToken)">
+            <summary>Hard delete by ids (dangerous; use for GDPR removal etc.).</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.Admin.OutboxAdminOptions.MaxBulkOperationSize">
+            <summary>
+            Max number of IDs you can requeue/purge in one call to avoid accidental mass operations.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.EFCore.Outbox.Dispatching.OutboxDispatcher`1">
+            <summary>
+            Executes outbox dispatch loop logic (claim -> publish -> finalize).
+            Provider-agnostic using optimistic concurrency.
+            </summary>
+        </member>
+        <member name="M:DomainRelay.EFCore.Outbox.Hosting.DomainRelayOutboxBuilder`1.WithDbContextOptions(System.Action{System.IServiceProvider,Microsoft.EntityFrameworkCore.DbContextOptionsBuilder})">
+            <summary>
+            REQUIRED. Configures both DbContext and DbContextFactory with the same options (provider/connection string).
+            </summary>
+        </member>
+        <member name="T:DomainRelay.EFCore.Outbox.OutboxEnvelope">
+            <summary>
+            Message envelope given to the transport publisher.
+            </summary>
+        </member>
+        <member name="M:DomainRelay.EFCore.Outbox.OutboxEnvelope.#ctor(System.Guid,System.Guid,System.String,System.Int32,System.DateTime,System.String,System.String,System.String,System.String)">
+            <summary>
+            Message envelope given to the transport publisher.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.EFCore.Outbox.OutboxMessage">
+            <summary>
+            Durable outbox record (provider-agnostic design).
+            </summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.EventId">
+            <summary>Logical event id (for downstream idempotency).</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.TypeKey">
+            <summary>Event type key (resolved through registry).</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.Version">
+            <summary>Version for payload schema evolution.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.OccurredOnUtc">
+            <summary>Occurred time (UTC).</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.EnqueuedAtUtc">
+            <summary>When it was inserted into the outbox (UTC).</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.ProcessedAtUtc">
+            <summary>When successfully dispatched (UTC).</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.AttemptCount">
+            <summary>How many times dispatch has been attempted.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.NextAttemptUtc">
+            <summary>Next eligible time for dispatch (UTC), supports backoff.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.LockedUntilUtc">
+            <summary>Lease / lock expiry (UTC). If expired, other workers may claim.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.LockedBy">
+            <summary>Identifier of the worker that currently owns the lease.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.LastError">
+            <summary>Last error summary (truncated).</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.HeadersJson">
+            <summary>Arbitrary headers for transport (json).</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.PayloadJson">
+            <summary>Payload json.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.ContentType">
+            <summary>Content type (default: application/json).</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.CorrelationId">
+            <summary>Optional correlation id for tracing.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxMessage.RowVersion">
+            <summary>Optimistic concurrency token.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.Schema">
+            <summary>DB schema name. Null means default schema.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.TableName">
+            <summary>Outbox table name.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.PollingInterval">
+            <summary>How often the dispatcher polls the DB.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.CleanupInterval">
+            <summary>How often cleanup runs.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.BatchSize">
+            <summary>How many messages to claim per batch.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.LeaseDuration">
+            <summary>How long a claim lease is valid.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.MaxAttempts">
+            <summary>Max attempts before dead-letter.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.BackoffBaseDelay">
+            <summary>Base delay for backoff.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.BackoffMaxDelay">
+            <summary>Max delay for backoff.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.ProcessedRetention">
+            <summary>
+            Cleanup: delete Processed messages older than this.
+            Set to null to disable deletion.
+            </summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.InstanceId">
+            <summary>Worker instance id for lease ownership.</summary>
+        </member>
+        <member name="P:DomainRelay.EFCore.Outbox.OutboxOptions.VerboseLogging">
+            <summary>
+            When true, dispatcher will log debug details more often (may be noisy).
+            </summary>
+        </member>
+        <member name="T:DomainRelay.EFCore.Outbox.OutboxSaveChangesInterceptor">
+            <summary>
+            Captures domain events from tracked entities and persists them to OutboxMessages
+            in the same SaveChanges transaction.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.EFCore.Outbox.OutboxTypeRegistry">
+            <summary>
+            Default allowlist registry. You must register event types explicitly.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.EFCore.Resolvers.DictionaryDbContextResolver">
+            <summary>
+            Map request types to DbContext via predicates or explicit type mapping.
+            </summary>
+        </member>
+    </members>
+</doc>

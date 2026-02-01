@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DomainRelay.Transport.RabbitMQ</name>
+    </assembly>
+    <members>
+        <member name="T:DomainRelay.Transport.RabbitMQ.Routing.IOutboxRouter">
+            <summary>
+            Determines where/how to publish a given outbox envelope.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.Transport.RabbitMQ.Routing.TypeKeyTopicRouter">
+            <summary>
+            Default router:
+            - Exchange = options.ExchangeName
+            - RoutingKey = envelope.TypeKey (normalized to topic-friendly)
+            </summary>
+        </member>
+    </members>
+</doc>

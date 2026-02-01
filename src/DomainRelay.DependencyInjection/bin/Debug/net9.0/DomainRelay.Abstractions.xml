@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DomainRelay.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:DomainRelay.Abstractions.IRequest`1">
+            <summary>
+            Marker interface for a request returning <typeparamref name="TResponse"/>.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.Abstractions.IRequestHandler`2">
+            <summary>
+            Handles a request of type <typeparamref name="TRequest"/>.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.Abstractions.INotification">
+            <summary>
+            Marker interface for publishable notifications (domain events).
+            </summary>
+        </member>
+        <member name="T:DomainRelay.Abstractions.INotificationHandler`1">
+            <summary>
+            Handles a notification of type <typeparamref name="TNotification"/>.
+            Multiple handlers are allowed.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.Abstractions.HandlerDelegate`1">
+            <summary>
+            Delegate representing the next step in a pipeline.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.Abstractions.IPipelineBehavior`2">
+            <summary>
+            Pipeline behavior around request handling.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.Abstractions.IMediator">
+            <summary>
+            Main mediator contract.
+            </summary>
+        </member>
+        <member name="T:DomainRelay.Abstractions.Unit">
+            <summary>
+            Represents a void-like response for commands.
+            </summary>
+        </member>
+    </members>
+</doc>

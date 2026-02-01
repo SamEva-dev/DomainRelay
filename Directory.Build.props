@@ -1,0 +1,41 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <!-- Multi-target .NET 8 + 9 -->
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+
+    <!-- Build reproducible / SourceLink -->
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+
+    <!-- NuGet defaults -->
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+
+    <!-- Versioning: base version; overridden by GitHub Actions on tag -->
+    <VersionPrefix>1.0.0</VersionPrefix>
+
+    <!-- Shared package metadata -->
+    <Authors>DomainRelay</Authors>
+    <Company>DomainRelay</Company>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+
+    <!-- Replace with your repo -->
+    <RepositoryUrl>https://github.com/your-org/DomainRelay</RepositoryUrl>
+
+    <PackageTags>mediator;cqrs;clean-architecture;domain-events;pipeline</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- SourceLink -->
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+</Project>
