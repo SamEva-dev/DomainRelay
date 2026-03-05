@@ -55,11 +55,11 @@
           "buildMultiTargeting/Microsoft.SourceLink.GitHub.targets": {}
         }
       },
-      "DomainRelay/1.0.0": {
+      "DomainRelay/1.0.0-alpha.4": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "DomainRelay.Abstractions": "1.0.0"
+          "DomainRelay.Abstractions": "1.0.0-alpha.4"
         },
         "compile": {
           "bin/placeholder/DomainRelay.dll": {}
@@ -68,7 +68,7 @@
           "bin/placeholder/DomainRelay.dll": {}
         }
       },
-      "DomainRelay.Abstractions/1.0.0": {
+      "DomainRelay.Abstractions/1.0.0-alpha.4": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
@@ -133,11 +133,11 @@
           "buildMultiTargeting/Microsoft.SourceLink.GitHub.targets": {}
         }
       },
-      "DomainRelay/1.0.0": {
+      "DomainRelay/1.0.0-alpha.4": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "DomainRelay.Abstractions": "1.0.0"
+          "DomainRelay.Abstractions": "1.0.0-alpha.4"
         },
         "compile": {
           "bin/placeholder/DomainRelay.dll": {}
@@ -146,7 +146,7 @@
           "bin/placeholder/DomainRelay.dll": {}
         }
       },
-      "DomainRelay.Abstractions/1.0.0": {
+      "DomainRelay.Abstractions/1.0.0-alpha.4": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
@@ -328,12 +328,12 @@
         "tools/net472/zh-Hant/Microsoft.SourceLink.GitHub.resources.dll"
       ]
     },
-    "DomainRelay/1.0.0": {
+    "DomainRelay/1.0.0-alpha.4": {
       "type": "project",
       "path": "../DomainRelay/DomainRelay.csproj",
       "msbuildProject": "../DomainRelay/DomainRelay.csproj"
     },
-    "DomainRelay.Abstractions/1.0.0": {
+    "DomainRelay.Abstractions/1.0.0-alpha.4": {
       "type": "project",
       "path": "../DomainRelay.Abstractions/DomainRelay.Abstractions.csproj",
       "msbuildProject": "../DomainRelay.Abstractions/DomainRelay.Abstractions.csproj"
@@ -341,14 +341,14 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "DomainRelay >= 1.0.0",
-      "DomainRelay.Abstractions >= 1.0.0",
+      "DomainRelay >= 1.0.0-alpha.4",
+      "DomainRelay.Abstractions >= 1.0.0-alpha.4",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 8.0.0",
       "Microsoft.SourceLink.GitHub >= 8.0.0"
     ],
     "net9.0": [
-      "DomainRelay >= 1.0.0",
-      "DomainRelay.Abstractions >= 1.0.0",
+      "DomainRelay >= 1.0.0-alpha.4",
+      "DomainRelay.Abstractions >= 1.0.0-alpha.4",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 8.0.0",
       "Microsoft.SourceLink.GitHub >= 8.0.0"
     ]
@@ -358,7 +358,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.0-alpha.4",
     "restore": {
       "projectUniqueName": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.DependencyInjection\\DomainRelay.DependencyInjection.csproj",
       "projectName": "DomainRelay.DependencyInjection",

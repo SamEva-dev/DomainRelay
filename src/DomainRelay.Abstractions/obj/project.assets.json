@@ -232,7 +232,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.0-alpha.4",
     "restore": {
       "projectUniqueName": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Abstractions\\DomainRelay.Abstractions.csproj",
       "projectName": "DomainRelay.Abstractions",

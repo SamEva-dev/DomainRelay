@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("FluentValidation pipeline behavior for DomainRelay.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52636dfce5e9a0230b52e5b112211dbbc11c4825")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("DomainRelay.Validation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DomainRelay.Validation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

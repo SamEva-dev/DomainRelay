@@ -5,7 +5,7 @@
   },
   "projects": {
     "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Abstractions\\DomainRelay.Abstractions.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.0-alpha.4",
       "restore": {
         "projectUniqueName": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Abstractions\\DomainRelay.Abstractions.csproj",
         "projectName": "DomainRelay.Abstractions",
