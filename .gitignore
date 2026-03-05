@@ -8,7 +8,7 @@
 *.suo
 *.user
 *.userosscache
-*.sln.docstates
+*.slnx.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -184,7 +184,7 @@ DocProject/Help/Html2
 DocProject/Help/html
 
 # Click-Once directory
-/publish/
+publish/
 
 # Publish Web Output
 *.[Pp]ublish.xml
@@ -272,6 +272,7 @@ ServiceFabricBackup/
 *.mdf
 *.ldf
 *.ndf
+*.md
 
 # Business Intelligence projects
 *.rdl.data
@@ -402,13 +403,15 @@ FodyWeavers.xsd
 *.msp
 
 # JetBrains Rider
-*.sln.iml
+*.slnx.iml
+
 
 *.pdf
 *.db-shm
 *.db-wal
 *.png
+*.md
 
+/src/DomainRelay/bin/Debug/net8.0/*
 
-.vs/DomainRelay.slnx/DesignTimeBuild/.dtbcache.v2
-/.vs/DomainRelay.slnx/DesignTimeBuild/.dtbcache.v2
+/src/DomainRelay.Abstractions/obj/Debug/net8.0/*
