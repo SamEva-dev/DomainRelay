@@ -13,6 +13,9 @@ on:
     tags:
       - "v*"
 
+env:
+  DEFAULT_PACKAGE_VERSION: "1.0.0-alpha.4"
+
 permissions:
   contents: read
 
@@ -61,8 +64,12 @@ jobs:
         id: ver
         shell: bash
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ inputs.version }}" ]; then
-            VER="${{ inputs.version }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ -n "${{ inputs.version }}" ]; then
+              VER="${{ inputs.version }}"
+            else
+              VER="${{ env.DEFAULT_PACKAGE_VERSION }}"
+            fi
           else
             TAG="${GITHUB_REF_NAME}"
             VER="${TAG#v}"
