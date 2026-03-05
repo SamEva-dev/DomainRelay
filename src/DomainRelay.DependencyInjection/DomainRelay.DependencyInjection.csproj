@@ -10,11 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DomainRelay.Abstractions\DomainRelay.Abstractions.csproj" />
-    <ProjectReference Include="..\..\DomainRelay\DomainRelay.csproj" />
+    <None Include="README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="" />
+    <ProjectReference Include="..\DomainRelay.Abstractions\DomainRelay.Abstractions.csproj" />
+    <ProjectReference Include="..\DomainRelay\DomainRelay.csproj" />
   </ItemGroup>
 </Project>

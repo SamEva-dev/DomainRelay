@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\DomainRelay.Abstractions\DomainRelay.Abstractions.csproj" />
-    <ProjectReference Include="..\..\DomainRelay\DomainRelay.csproj" />
     <ProjectReference Include="..\..\src\DomainRelay.DependencyInjection\DomainRelay.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\src\DomainRelay\DomainRelay.csproj" />
   </ItemGroup>
 </Project>

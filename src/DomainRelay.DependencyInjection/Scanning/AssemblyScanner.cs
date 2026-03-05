@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using DomainRelay.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace DomainRelay.DependencyInjection.Scanning;
 
@@ -26,7 +27,7 @@ internal static class AssemblyScanner
                     def == typeof(INotificationHandler<>) ||
                     def == typeof(IPipelineBehavior<,>))
                 {
-                    services.AddTransient(itf, impl);
+                    services.TryAddEnumerable(ServiceDescriptor.Transient(itf, impl));
                 }
             }
         }

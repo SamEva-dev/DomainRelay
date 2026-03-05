@@ -10,10 +10,10 @@ E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\bin\Debug\net8.
 E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\bin\Debug\net8.0\DomainRelay.Diagnostics.xml
 E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\bin\Debug\net8.0\DomainRelay.Abstractions.dll
 E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\bin\Debug\net8.0\DomainRelay.dll
-E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\bin\Debug\net8.0\DomainRelay.pdb
-E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\bin\Debug\net8.0\DomainRelay.xml
 E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\bin\Debug\net8.0\DomainRelay.Abstractions.pdb
 E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\bin\Debug\net8.0\DomainRelay.Abstractions.xml
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\bin\Debug\net8.0\DomainRelay.pdb
+E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\bin\Debug\net8.0\DomainRelay.xml
 E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\obj\Debug\net8.0\DomainRe.F3A9E73B.Up2Date
 E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\obj\Debug\net8.0\DomainRelay.Diagnostics.dll
 E:\Gestion immobilier V0\DomainRelay\src\DomainRelay.Diagnostics\obj\Debug\net8.0\refint\DomainRelay.Diagnostics.dll

@@ -330,8 +330,8 @@
     },
     "DomainRelay/1.0.0": {
       "type": "project",
-      "path": "../../DomainRelay/DomainRelay.csproj",
-      "msbuildProject": "../../DomainRelay/DomainRelay.csproj"
+      "path": "../DomainRelay/DomainRelay.csproj",
+      "msbuildProject": "../DomainRelay/DomainRelay.csproj"
     },
     "DomainRelay.Abstractions/1.0.0": {
       "type": "project",
@@ -388,22 +388,22 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\DomainRelay.csproj": {
-              "projectPath": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\DomainRelay.csproj"
-            },
             "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Abstractions\\DomainRelay.Abstractions.csproj": {
               "projectPath": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Abstractions\\DomainRelay.Abstractions.csproj"
+            },
+            "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay\\DomainRelay.csproj": {
+              "projectPath": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay\\DomainRelay.csproj"
             }
           }
         },
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\DomainRelay.csproj": {
-              "projectPath": "E:\\Gestion immobilier V0\\DomainRelay\\DomainRelay\\DomainRelay.csproj"
-            },
             "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Abstractions\\DomainRelay.Abstractions.csproj": {
               "projectPath": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay.Abstractions\\DomainRelay.Abstractions.csproj"
+            },
+            "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay\\DomainRelay.csproj": {
+              "projectPath": "E:\\Gestion immobilier V0\\DomainRelay\\src\\DomainRelay\\DomainRelay.csproj"
             }
           }
         }
@@ -451,7 +451,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
       },
       "net9.0": {
         "targetAlias": "net9.0",
@@ -482,7 +482,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,4 +1,10 @@
 E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_DomainRelay.Tests
+E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.csproj.AssemblyReference.cache
+E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.GeneratedMSBuildEditorConfig.editorconfig
+E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.AssemblyInfoInputs.cache
+E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.AssemblyInfo.cs
+E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.csproj.CoreCompileInputs.cache
+E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.sourcelink.json
 E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\bin\Debug\net9.0\testhost.dll
 E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\bin\Debug\net9.0\testhost.exe
 E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll
@@ -98,12 +104,6 @@ E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\bin\Debug\net9.0\Do
 E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\bin\Debug\net9.0\DomainRelay.DependencyInjection.xml
 E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\bin\Debug\net9.0\DomainRelay.pdb
 E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\bin\Debug\net9.0\DomainRelay.xml
-E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.csproj.AssemblyReference.cache
-E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.GeneratedMSBuildEditorConfig.editorconfig
-E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.AssemblyInfoInputs.cache
-E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.AssemblyInfo.cs
-E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.csproj.CoreCompileInputs.cache
-E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.sourcelink.json
 E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRe.6ED450E9.Up2Date
 E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\DomainRelay.Tests.dll
 E:\Gestion immobilier V0\DomainRelay\tests\DomainRelay.Tests\obj\Debug\net9.0\refint\DomainRelay.Tests.dll
