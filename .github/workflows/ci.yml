@@ -23,10 +23,10 @@ jobs:
             9.0.x
 
       - name: Restore
-        run: dotnet restore DomainRelay.sln
+        run: dotnet restore DomainRelayslnx
 
       - name: Build
-        run: dotnet build DomainRelay.sln -c Release --no-restore /p:VersionSuffix=alpha.${{ github.run_number }}
+        run: dotnet build DomainRelayslnx -c Release --no-restore /p:VersionSuffix=alpha.${{ github.run_number }}
 
       - name: Test
-        run: dotnet test DomainRelay.sln -c Release --no-build --verbosity normal
+        run: dotnet test DomainRelayslnx -c Release --no-build --verbosity normal
