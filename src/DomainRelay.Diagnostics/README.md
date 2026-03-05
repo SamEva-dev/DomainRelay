@@ -20,3 +20,4 @@ services.AddDomainRelayDiagnostics();
 - Tags typically include request type, response type, success/failure, and exception metadata
 
 This is compatible with OpenTelemetry (exporters configured in your application).
+ok.
