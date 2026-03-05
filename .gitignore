@@ -272,7 +272,6 @@ ServiceFabricBackup/
 *.mdf
 *.ldf
 *.ndf
-*.md
 
 # Business Intelligence projects
 *.rdl.data
@@ -409,7 +408,7 @@ FodyWeavers.xsd
 *.db-shm
 *.db-wal
 *.png
-*.md
 
 
 .vs/DomainRelay.slnx/DesignTimeBuild/.dtbcache.v2
+/.vs/DomainRelay.slnx/DesignTimeBuild/.dtbcache.v2

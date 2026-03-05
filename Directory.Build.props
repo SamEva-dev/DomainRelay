@@ -38,4 +38,8 @@
     <!-- SourceLink -->
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)*.md" Pack="true" PackagePath="docs/" />
+  </ItemGroup>
 </Project>

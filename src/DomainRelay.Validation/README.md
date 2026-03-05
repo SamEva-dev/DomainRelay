@@ -1,9 +1,23 @@
-
-### `src/DomainRelay.Validation/README.md`
-```md
 # DomainRelay.Validation
 
-FluentValidation pipeline behavior.
+FluentValidation integration for DomainRelay via a pipeline behavior.
+
+## Install
+
+- `DomainRelay.Validation`
+
+## Register
 
 ```csharp
+using DomainRelay.Validation;
+
 services.AddDomainRelayValidation();
+```
+
+## Register validators
+
+```csharp
+using FluentValidation;
+
+services.AddTransient<IValidator<CreateUser>, CreateUserValidator>();
+```
