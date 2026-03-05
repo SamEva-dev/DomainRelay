@@ -7,7 +7,7 @@ namespace DomainRelay.Diagnostics.Behaviors;
 public sealed class DiagnosticsBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
 {
-    public async Task<TResponse> Handle(TRequest request, CancellationToken ct, HandlerDelegate<TResponse> next)
+    public async Task<TResponse> Handle(TRequest request, HandlerDelegate<TResponse> next, CancellationToken ct)
     {
         var name = TypeNameCache.GetFriendlyName(typeof(TRequest));
 

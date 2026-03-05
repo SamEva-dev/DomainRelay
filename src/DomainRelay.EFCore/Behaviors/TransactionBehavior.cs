@@ -12,7 +12,7 @@ public sealed class TransactionBehavior<TRequest, TResponse> : IPipelineBehavior
     public TransactionBehavior(IDomainRelayDbContextResolver resolver)
         => _resolver = resolver;
 
-    public async Task<TResponse> Handle(TRequest request, CancellationToken ct, HandlerDelegate<TResponse> next)
+    public async Task<TResponse> Handle(TRequest request, HandlerDelegate<TResponse> next, CancellationToken ct)
     {
         var db = _resolver.ResolveDbContext(typeof(TRequest));
 

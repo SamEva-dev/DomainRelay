@@ -13,7 +13,7 @@ public sealed class FluentValidationBehavior<TRequest, TResponse> : IPipelineBeh
         _validators = validators;
     }
 
-    public async Task<TResponse> Handle(TRequest request, CancellationToken ct, HandlerDelegate<TResponse> next)
+    public async Task<TResponse> Handle(TRequest request, HandlerDelegate<TResponse> next, CancellationToken ct)
     {
         if (_validators.Any())
         {

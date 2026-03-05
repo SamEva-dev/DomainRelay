@@ -40,7 +40,7 @@ public delegate Task<TResponse> HandlerDelegate<TResponse>();
 public interface IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
 {
-    Task<TResponse> Handle(TRequest request, CancellationToken ct, HandlerDelegate<TResponse> next);
+    Task<TResponse> Handle(TRequest request, HandlerDelegate<TResponse> next, CancellationToken ct);
 }
 
 /// <summary>

@@ -14,13 +14,13 @@ public sealed class Mediator_Pipeline_Tests
 
     private sealed class AddOneBehavior : IPipelineBehavior<Ping, int>
     {
-        public async Task<int> Handle(Ping request, CancellationToken ct, HandlerDelegate<int> next)
+        public async Task<int> Handle(Ping request, HandlerDelegate<int> next, CancellationToken ct)
             => (await next()) + 1;
     }
 
     private sealed class TimesTwoBehavior : IPipelineBehavior<Ping, int>
     {
-        public async Task<int> Handle(Ping request, CancellationToken ct, HandlerDelegate<int> next)
+        public async Task<int> Handle(Ping request, HandlerDelegate<int> next, CancellationToken ct)
             => (await next()) * 2;
     }
 

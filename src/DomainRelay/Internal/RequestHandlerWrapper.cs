@@ -26,7 +26,7 @@ internal sealed class RequestHandlerWrapper<TRequest, TResponse> : RequestHandle
         foreach (var behavior in behaviors.Reverse())
         {
             var next = invokeHandler;
-            invokeHandler = () => behavior.Handle(request, ct, next);
+            invokeHandler = () => behavior.Handle(request,  next, ct);
         }
 
         return Box(invokeHandler);
