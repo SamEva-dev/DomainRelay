@@ -1,9 +1,17 @@
 ﻿namespace DomainRelay.Abstractions;
 
+public interface IRequest { }
+
 /// <summary>
 /// Marker interface for a request returning <typeparamref name="TResponse"/>.
 /// </summary>
-public interface IRequest<out TResponse> { }
+public interface IRequest<out TResponse> : IRequest { }
+
+public interface IRequestHandler<in TRequest>
+    where TRequest : IRequest
+{
+    Task Handle(TRequest request, CancellationToken ct);
+}
 
 /// <summary>
 /// Handles a request of type <typeparamref name="TRequest"/>.
@@ -29,10 +37,18 @@ public interface INotificationHandler<in TNotification>
     Task Handle(TNotification notification, CancellationToken ct);
 }
 
+public delegate Task HandlerDelegate();
+
 /// <summary>
 /// Delegate representing the next step in a pipeline.
 /// </summary>
 public delegate Task<TResponse> HandlerDelegate<TResponse>();
+
+public interface IPipelineBehavior<TRequest>
+    where TRequest : IRequest
+{
+    Task Handle(TRequest request, HandlerDelegate next, CancellationToken ct);
+}
 
 /// <summary>
 /// Pipeline behavior around request handling.
@@ -49,6 +65,8 @@ public interface IPipelineBehavior<TRequest, TResponse>
 public interface IMediator
 {
     Task<TResponse> Send<TResponse>(IRequest<TResponse> request, CancellationToken ct = default);
+
+    Task Send(IRequest request, CancellationToken ct = default);
 
     Task Publish<TNotification>(TNotification notification, CancellationToken ct = default)
         where TNotification : INotification;

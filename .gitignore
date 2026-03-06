@@ -414,10 +414,16 @@ FodyWeavers.xsd
 
 /src/DomainRelay/bin/Debug/net8.0/*
 
-/src/DomainRelay.Abstractions/obj/*
-/src/DomainRelay.DependencyInjection/*
-/src/DomainRelay.Diagnostics/*
+!/src/DomainRelay.Abstractions/**
+!/src/DomainRelay/**
+!/src/DomainRelay.DependencyInjection/**
+!/src/DomainRelay.Diagnostics/**
+/src/DomainRelay.DependencyInjection/obj/*
+/src/DomainRelay.Diagnostics/obj/*
 /src/DomainRelay.EFCore/obj/*
 /src/DomainRelay.Validation/obj/*
 /tests/DomainRelay.Tests/bin/*
 /tests/DomainRelay.Tests/obj/*
+
+**/bin/
+**/obj/
