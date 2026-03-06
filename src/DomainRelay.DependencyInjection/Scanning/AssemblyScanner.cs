@@ -23,8 +23,10 @@ internal static class AssemblyScanner
 
                 var def = itf.GetGenericTypeDefinition();
 
-                if (def == typeof(IRequestHandler<,>) ||
+                if (def == typeof(IRequestHandler<>) ||
+                    def == typeof(IRequestHandler<,>) ||
                     def == typeof(INotificationHandler<>) ||
+                    def == typeof(IPipelineBehavior<>) ||
                     def == typeof(IPipelineBehavior<,>))
                 {
                     services.TryAddEnumerable(ServiceDescriptor.Transient(itf, impl));

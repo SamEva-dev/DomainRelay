@@ -43,6 +43,29 @@ public sealed class Mediator : IMediator
         }
     }
 
+    public async Task Send(IRequest request, CancellationToken ct = default)
+    {
+        if (request is null) throw new ArgumentNullException(nameof(request));
+
+        var reqType = request.GetType();
+        var resType = typeof(Unit);
+
+        var wrapper = RequestWrappers.GetOrAdd((reqType, resType), static key =>
+        {
+            var wrapperType = typeof(VoidRequestHandlerWrapper<>).MakeGenericType(key.Req);
+            return (RequestHandlerWrapper)Activator.CreateInstance(wrapperType)!;
+        });
+
+        try
+        {
+            await wrapper.Handle(_sp, request, ct).ConfigureAwait(false);
+        }
+        catch (Exception ex) when (_options.WrapExceptions)
+        {
+            throw new DomainRelayException($"DomainRelay.Send failed for {TypeNameCache.GetFriendlyName(reqType)}.", ex);
+        }
+    }
+
     public async Task Publish<TNotification>(TNotification notification, CancellationToken ct = default)
         where TNotification : INotification
     {

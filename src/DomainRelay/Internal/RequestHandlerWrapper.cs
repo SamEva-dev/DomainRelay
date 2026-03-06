@@ -7,6 +7,32 @@ internal abstract class RequestHandlerWrapper
     public abstract Task<object?> Handle(IServiceProvider sp, object request, CancellationToken ct);
 }
 
+internal sealed class VoidRequestHandlerWrapper<TRequest> : RequestHandlerWrapper
+    where TRequest : IRequest
+{
+    public override async Task<object?> Handle(IServiceProvider sp, object request, CancellationToken ct)
+    {
+        var typed = (TRequest)request;
+
+        var handler = (IRequestHandler<TRequest>)sp.GetService(typeof(IRequestHandler<TRequest>))!
+            ?? throw new InvalidOperationException($"No handler registered for {typeof(TRequest).FullName}.");
+
+        var behaviors = (IEnumerable<IPipelineBehavior<TRequest>>)sp.GetService(typeof(IEnumerable<IPipelineBehavior<TRequest>>))!
+            ?? Array.Empty<IPipelineBehavior<TRequest>>();
+
+        HandlerDelegate invokeHandler = () => handler.Handle(typed, ct);
+
+        foreach (var behavior in behaviors.Reverse())
+        {
+            var next = invokeHandler;
+            invokeHandler = () => behavior.Handle(typed, next, ct);
+        }
+
+        await invokeHandler().ConfigureAwait(false);
+        return Unit.Value;
+    }
+}
+
 internal sealed class RequestHandlerWrapper<TRequest, TResponse> : RequestHandlerWrapper
     where TRequest : IRequest<TResponse>
 {
@@ -26,7 +52,7 @@ internal sealed class RequestHandlerWrapper<TRequest, TResponse> : RequestHandle
         foreach (var behavior in behaviors.Reverse())
         {
             var next = invokeHandler;
-            invokeHandler = () => behavior.Handle(request,  next, ct);
+            invokeHandler = () => behavior.Handle(request, next, ct);
         }
 
         return Box(invokeHandler);
