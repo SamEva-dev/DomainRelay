@@ -32,19 +32,68 @@ jobs:
         with:
           dotnet-version: 9.0.x
 
-      - name: Restore
-        run: dotnet restore DomainRelay.slnx
+      - name: Restore packages
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          dotnet restore DomainRelay.Abstractions/DomainRelay.Abstractions.csproj
+          dotnet restore DomainRelay/DomainRelay.csproj
+          dotnet restore DomainRelay.DependencyInjection/DomainRelay.DependencyInjection.csproj
+          dotnet restore DomainRelay.Diagnostics/DomainRelay.Diagnostics.csproj
+          dotnet restore DomainRelay.Validation/DomainRelay.Validation.csproj
+          dotnet restore DomainRelay.EFCore/DomainRelay.EFCore.csproj
+          dotnet restore DomainRelay.Transport.RabbitMQ/DomainRelay.Transport.RabbitMQ.csproj
+
+          dotnet restore Mapping/DomainRelay.Mapping.Abstractions/DomainRelay.Mapping.Abstractions.csproj
+          dotnet restore Mapping/DomainRelay.Mapping/DomainRelay.Mapping.csproj
+          dotnet restore Mapping/DomainRelay.Mapping.DependencyInjection/DomainRelay.Mapping.DependencyInjection.csproj
+          dotnet restore Mapping/DomainRelay.Mapping.Expressions/DomainRelay.Mapping.Expressions.csproj
+          dotnet restore Mapping/DomainRelay.Mapping.SourceGen/DomainRelay.Mapping.SourceGen.csproj
+
+          dotnet restore tests/DomainRelay.Tests/DomainRelay.Tests.csproj
+          dotnet restore tests/Mapping/DomainRelay.Mapping.Tests/DomainRelay.Mapping.Tests.csproj
+          dotnet restore tests/Mapping/DomainRelay.Mapping.DependencyInjection.Tests/DomainRelay.Mapping.DependencyInjection.Tests.csproj
+          dotnet restore tests/Mapping/DomainRelay.Mapping.Expressions.Tests/DomainRelay.Mapping.Expressions.Tests.csproj
+          dotnet restore tests/Mapping/DomainRelay.Mapping.SourceGen.Tests/DomainRelay.Mapping.SourceGen.Tests.csproj
 
       - name: Build
-        run: dotnet build DomainRelay.slnx -c Release --no-restore
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          dotnet build DomainRelay.Abstractions/DomainRelay.Abstractions.csproj -c Release --no-restore
+          dotnet build DomainRelay/DomainRelay.csproj -c Release --no-restore
+          dotnet build DomainRelay.DependencyInjection/DomainRelay.DependencyInjection.csproj -c Release --no-restore
+          dotnet build DomainRelay.Diagnostics/DomainRelay.Diagnostics.csproj -c Release --no-restore
+          dotnet build DomainRelay.Validation/DomainRelay.Validation.csproj -c Release --no-restore
+          dotnet build DomainRelay.EFCore/DomainRelay.EFCore.csproj -c Release --no-restore
+          dotnet build DomainRelay.Transport.RabbitMQ/DomainRelay.Transport.RabbitMQ.csproj -c Release --no-restore
+
+          dotnet build Mapping/DomainRelay.Mapping.Abstractions/DomainRelay.Mapping.Abstractions.csproj -c Release --no-restore
+          dotnet build Mapping/DomainRelay.Mapping/DomainRelay.Mapping.csproj -c Release --no-restore
+          dotnet build Mapping/DomainRelay.Mapping.DependencyInjection/DomainRelay.Mapping.DependencyInjection.csproj -c Release --no-restore
+          dotnet build Mapping/DomainRelay.Mapping.Expressions/DomainRelay.Mapping.Expressions.csproj -c Release --no-restore
+          dotnet build Mapping/DomainRelay.Mapping.SourceGen/DomainRelay.Mapping.SourceGen.csproj -c Release --no-restore
 
       - name: Test
-        run: dotnet test DomainRelay.slnx -c Release --no-build
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          dotnet test tests/DomainRelay.Tests/DomainRelay.Tests.csproj -c Release --no-restore
+          dotnet test tests/Mapping/DomainRelay.Mapping.Tests/DomainRelay.Mapping.Tests.csproj -c Release --no-restore
+          dotnet test tests/Mapping/DomainRelay.Mapping.DependencyInjection.Tests/DomainRelay.Mapping.DependencyInjection.Tests.csproj -c Release --no-restore
+          dotnet test tests/Mapping/DomainRelay.Mapping.Expressions.Tests/DomainRelay.Mapping.Expressions.Tests.csproj -c Release --no-restore
+          dotnet test tests/Mapping/DomainRelay.Mapping.SourceGen.Tests/DomainRelay.Mapping.SourceGen.Tests.csproj -c Release --no-restore
 
   publish:
     if: github.event_name == 'workflow_dispatch'
     needs: ci
     runs-on: ubuntu-latest
+
+    env:
+      PACKAGE_VERSION: ${{ github.event.inputs.packageVersion }}
 
     steps:
       - name: Checkout
@@ -60,40 +109,65 @@ jobs:
         with:
           dotnet-version: 9.0.x
 
-      - name: Restore
-        run: dotnet restore DomainRelay.slnx
+      - name: Restore packages
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          dotnet restore DomainRelay.Abstractions/DomainRelay.Abstractions.csproj
+          dotnet restore DomainRelay/DomainRelay.csproj
+          dotnet restore DomainRelay.DependencyInjection/DomainRelay.DependencyInjection.csproj
+          dotnet restore DomainRelay.Diagnostics/DomainRelay.Diagnostics.csproj
+          dotnet restore DomainRelay.Validation/DomainRelay.Validation.csproj
+          dotnet restore DomainRelay.EFCore/DomainRelay.EFCore.csproj
+          dotnet restore DomainRelay.Transport.RabbitMQ/DomainRelay.Transport.RabbitMQ.csproj
+
+          dotnet restore Mapping/DomainRelay.Mapping.Abstractions/DomainRelay.Mapping.Abstractions.csproj
+          dotnet restore Mapping/DomainRelay.Mapping/DomainRelay.Mapping.csproj
+          dotnet restore Mapping/DomainRelay.Mapping.DependencyInjection/DomainRelay.Mapping.DependencyInjection.csproj
+          dotnet restore Mapping/DomainRelay.Mapping.Expressions/DomainRelay.Mapping.Expressions.csproj
+          dotnet restore Mapping/DomainRelay.Mapping.SourceGen/DomainRelay.Mapping.SourceGen.csproj
 
       - name: Build
-        run: dotnet build DomainRelay.slnx -c Release --no-restore
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          dotnet build DomainRelay.Abstractions/DomainRelay.Abstractions.csproj -c Release --no-restore
+          dotnet build DomainRelay/DomainRelay.csproj -c Release --no-restore
+          dotnet build DomainRelay.DependencyInjection/DomainRelay.DependencyInjection.csproj -c Release --no-restore
+          dotnet build DomainRelay.Diagnostics/DomainRelay.Diagnostics.csproj -c Release --no-restore
+          dotnet build DomainRelay.Validation/DomainRelay.Validation.csproj -c Release --no-restore
+          dotnet build DomainRelay.EFCore/DomainRelay.EFCore.csproj -c Release --no-restore
+          dotnet build DomainRelay.Transport.RabbitMQ/DomainRelay.Transport.RabbitMQ.csproj -c Release --no-restore
+
+          dotnet build Mapping/DomainRelay.Mapping.Abstractions/DomainRelay.Mapping.Abstractions.csproj -c Release --no-restore
+          dotnet build Mapping/DomainRelay.Mapping/DomainRelay.Mapping.csproj -c Release --no-restore
+          dotnet build Mapping/DomainRelay.Mapping.DependencyInjection/DomainRelay.Mapping.DependencyInjection.csproj -c Release --no-restore
+          dotnet build Mapping/DomainRelay.Mapping.Expressions/DomainRelay.Mapping.Expressions.csproj -c Release --no-restore
+          dotnet build Mapping/DomainRelay.Mapping.SourceGen/DomainRelay.Mapping.SourceGen.csproj -c Release --no-restore
 
       - name: Pack NuGet packages
         shell: bash
         run: |
           set -euo pipefail
 
-          VERSION="${{ github.event.inputs.packageVersion }}"
-          echo "Publishing version: $VERSION"
-
+          echo "Publishing version: $PACKAGE_VERSION"
           mkdir -p ./artifacts
 
-          dotnet pack DomainRelay.Abstractions/DomainRelay.Abstractions.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
-          dotnet pack DomainRelay/DomainRelay.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
-          dotnet pack DomainRelay.DependencyInjection/DomainRelay.DependencyInjection.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
-          dotnet pack DomainRelay.Diagnostics/DomainRelay.Diagnostics.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
-          dotnet pack DomainRelay.Validation/DomainRelay.Validation.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
-          dotnet pack DomainRelay.EFCore/DomainRelay.EFCore.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
-          dotnet pack DomainRelay.Transport.RabbitMQ/DomainRelay.Transport.RabbitMQ.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay.Abstractions/DomainRelay.Abstractions.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay/DomainRelay.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay.DependencyInjection/DomainRelay.DependencyInjection.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay.Diagnostics/DomainRelay.Diagnostics.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay.Validation/DomainRelay.Validation.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay.EFCore/DomainRelay.EFCore.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay.Transport.RabbitMQ/DomainRelay.Transport.RabbitMQ.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
 
-          dotnet pack Mapping/DomainRelay.Mapping.Abstractions/DomainRelay.Mapping.Abstractions.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
-          dotnet pack Mapping/DomainRelay.Mapping/DomainRelay.Mapping.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
-          dotnet pack Mapping/DomainRelay.Mapping.DependencyInjection/DomainRelay.Mapping.DependencyInjection.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
-          dotnet pack Mapping/DomainRelay.Mapping.Expressions/DomainRelay.Mapping.Expressions.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
-          dotnet pack Mapping/DomainRelay.Mapping.SourceGen/DomainRelay.Mapping.SourceGen.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
-
-      - name: List produced artifacts
-        shell: bash
-        run: |
-          ls -la ./artifacts
+          dotnet pack Mapping/DomainRelay.Mapping.Abstractions/DomainRelay.Mapping.Abstractions.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack Mapping/DomainRelay.Mapping/DomainRelay.Mapping.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack Mapping/DomainRelay.Mapping.DependencyInjection/DomainRelay.Mapping.DependencyInjection.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack Mapping/DomainRelay.Mapping.Expressions/DomainRelay.Mapping.Expressions.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack Mapping/DomainRelay.Mapping.SourceGen/DomainRelay.Mapping.SourceGen.csproj -c Release --no-build /p:PackageVersion=$PACKAGE_VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
 
       - name: Push packages to NuGet
         shell: bash
