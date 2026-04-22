@@ -1,17 +1,56 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+
+    <IsPackable>true</IsPackable>
+    <IsRoslynAnalyzer>true</IsRoslynAnalyzer>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+
+    <NoWarn>RS2008;CS1591</NoWarn>
+
+    <PackageId>DomainRelay.Mapping.SourceGen</PackageId>
+    <Version>0.11.0</Version>
+    <Authors>LocaGuest</Authors>
+    <Company>LocaGuest</Company>
+    <Description>Source generator for simple DomainRelay.Mapping mappings.</Description>
+    <PackageTags>mapping source-generator domainrelay roslyn</PackageTags>
+    <RepositoryUrl>https://github.com/your-org/DomainRelay.Mapping</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DomainRelay.Mapping.Abstractions\DomainRelay.Mapping.Abstractions.csproj" />
-    <ProjectReference Include="..\..\DomainRelay.Mapping.SourceGen\DomainRelay.Mapping.SourceGen.csproj"
-                      OutputItemType="Analyzer"
-                      ReferenceOutputAssembly="false" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.11.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0" PrivateAssets="all" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="obj2\**\*.cs" />
+  </ItemGroup>
+
+  <Target Name="PackAnalyzerArtifacts" AfterTargets="Build">
+    <ItemGroup>
+      <None Include="$(TargetPath)" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+      <None Include="$(TargetDir)$(AssemblyName).pdb"
+            Condition="Exists('$(TargetDir)$(AssemblyName).pdb')"
+            Pack="true"
+            PackagePath="analyzers/dotnet/cs"
+            Visible="false" />
+    </ItemGroup>
+  </Target>
 
 </Project>
