@@ -1,32 +1,36 @@
 name: ci-and-publish
 
 on:
+  pull_request:
   push:
     branches: ["main"]
   workflow_dispatch:
-
-env:
-  # ✅ Tu modifies juste ça manuellement quand tu veux publier une nouvelle version
-  PACKAGE_VERSION: "3.0.0"
+    inputs:
+      packageVersion:
+        description: "NuGet package version"
+        required: true
+        default: "0.10.0"
 
 permissions:
   contents: read
 
 jobs:
-  ci_and_publish:
+  ci:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup .NET
+      - name: Setup .NET 8
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version:
-            8.0.x
-            9.0.x
-            10.0.x
+          dotnet-version: 8.0.x
+
+      - name: Setup .NET 9
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
 
       - name: Restore
         run: dotnet restore DomainRelay.slnx
@@ -37,15 +41,62 @@ jobs:
       - name: Test
         run: dotnet test DomainRelay.slnx -c Release --no-build
 
-      - name: Pack
+  publish:
+    if: github.event_name == 'workflow_dispatch'
+    needs: ci
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Setup .NET 9
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Restore
+        run: dotnet restore DomainRelay.slnx
+
+      - name: Build
+        run: dotnet build DomainRelay.slnx -c Release --no-restore
+
+      - name: Pack NuGet packages
+        shell: bash
         run: |
-          echo "Publishing version: $PACKAGE_VERSION"
-          dotnet pack DomainRelay.slnx -c Release --no-build \
-            /p:PackageVersion=$PACKAGE_VERSION \
-            /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg \
-            -o ./artifacts
+          set -euo pipefail
+
+          VERSION="${{ github.event.inputs.packageVersion }}"
+          echo "Publishing version: $VERSION"
+
+          mkdir -p ./artifacts
+
+          dotnet pack DomainRelay.Abstractions/DomainRelay.Abstractions.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay/DomainRelay.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay.DependencyInjection/DomainRelay.DependencyInjection.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay.Diagnostics/DomainRelay.Diagnostics.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay.Validation/DomainRelay.Validation.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay.EFCore/DomainRelay.EFCore.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack DomainRelay.Transport.RabbitMQ/DomainRelay.Transport.RabbitMQ.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+
+          dotnet pack Mapping/DomainRelay.Mapping.Abstractions/DomainRelay.Mapping.Abstractions.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack Mapping/DomainRelay.Mapping/DomainRelay.Mapping.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack Mapping/DomainRelay.Mapping.DependencyInjection/DomainRelay.Mapping.DependencyInjection.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack Mapping/DomainRelay.Mapping.Expressions/DomainRelay.Mapping.Expressions.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+          dotnet pack Mapping/DomainRelay.Mapping.SourceGen/DomainRelay.Mapping.SourceGen.csproj -c Release --no-build /p:PackageVersion=$VERSION /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ./artifacts
+
+      - name: List produced artifacts
+        shell: bash
+        run: |
+          ls -la ./artifacts
 
       - name: Push packages to NuGet
+        shell: bash
         run: |
           dotnet nuget push "./artifacts/*.nupkg" \
             --api-key "${{ secrets.NUGET_API_KEY }}" \
@@ -53,6 +104,7 @@ jobs:
             --skip-duplicate
 
       - name: Push symbols to NuGet
+        shell: bash
         run: |
           dotnet nuget push "./artifacts/*.snupkg" \
             --api-key "${{ secrets.NUGET_API_KEY }}" \

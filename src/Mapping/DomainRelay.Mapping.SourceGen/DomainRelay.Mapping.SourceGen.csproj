@@ -1,22 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+
+    <IsPackable>true</IsPackable>
     <IsRoslynAnalyzer>true</IsRoslynAnalyzer>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+
     <IncludeBuildOutput>false</IncludeBuildOutput>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <NoWarn>RS2008;CS1591</NoWarn>
+
+    <NoWarn>$(NoWarn);RS2008;CS1591</NoWarn>
 
     <PackageId>DomainRelay.Mapping.SourceGen</PackageId>
-    <Version>0.11.0</Version>
+    <Version>0.10.0</Version>
     <Authors>LocaGuest</Authors>
     <Company>LocaGuest</Company>
     <Description>Source generator for simple DomainRelay.Mapping mappings.</Description>
     <PackageTags>mapping source-generator domainrelay roslyn</PackageTags>
-    <RepositoryUrl>https://github.com/your-org/DomainRelay.Mapping</RepositoryUrl>
+    <RepositoryUrl>https://github.com/your-org/DomainRelay</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -37,5 +43,19 @@
     <Compile Remove="obj2\**\*.cs" />
   </ItemGroup>
 
+  <Target Name="PackAnalyzerAssembly" BeforeTargets="GenerateNuspec">
+    <ItemGroup>
+      <None Include="$(TargetPath)"
+            Pack="true"
+            PackagePath="analyzers/dotnet/cs"
+            Visible="false" />
+
+      <None Include="$(TargetDir)$(AssemblyName).pdb"
+            Condition="Exists('$(TargetDir)$(AssemblyName).pdb')"
+            Pack="true"
+            PackagePath="analyzers/dotnet/cs"
+            Visible="false" />
+    </ItemGroup>
+  </Target>
 
 </Project>
