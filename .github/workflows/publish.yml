@@ -7,7 +7,7 @@ on:
 
 env:
   # ✅ Tu modifies juste ça manuellement quand tu veux publier une nouvelle version
-  PACKAGE_VERSION: "2.0.1"
+  PACKAGE_VERSION: "3.0.0"
 
 permissions:
   contents: read
@@ -23,7 +23,10 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 9.0.x
+          dotnet-version:
+            8.0.x
+            9.0.x
+            10.0.x
 
       - name: Restore
         run: dotnet restore DomainRelay.slnx

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <LangVersion>latest</LangVersion>
+  
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>DomainRelay.Mapping.Abstractions</PackageId>
+    <Version>0.10.0</Version>
+    <Authors>LocaGuest</Authors>
+    <Company>LocaGuest</Company>
+    <Description>Public abstractions for DomainRelay.Mapping.</Description>
+    <PackageTags>mapping domainrelay abstractions object-mapper</PackageTags>
+    <RepositoryUrl>https://github.com/your-org/DomainRelay.Mapping</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

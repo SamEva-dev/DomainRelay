@@ -6,7 +6,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 
     <!-- Multi-target .NET 8 + 9 -->
-    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <TargetFrameworks Condition="'$(TargetFrameworks)' == ''">net9.0</TargetFrameworks>
 
     <!-- Build reproducible / SourceLink -->
     <Deterministic>true</Deterministic>
@@ -35,8 +35,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- SourceLink -->
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <!-- SourceLink is only needed in CI/package publishing. Keep local builds offline-friendly. -->
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" Condition="'$(GITHUB_ACTIONS)' == 'true'" />
   </ItemGroup>
 
   <ItemGroup>

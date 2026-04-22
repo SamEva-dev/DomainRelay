@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <NoWarn>$(NoWarn);NU1603;NU1903</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mapping\DomainRelay.Mapping.Abstractions\DomainRelay.Mapping.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Mapping\DomainRelay.Mapping\DomainRelay.Mapping.csproj" />
+    <ProjectReference Include="..\..\Mapping\DomainRelay.Mapping.DependencyInjection\DomainRelay.Mapping.DependencyInjection.csproj" />
+  </ItemGroup>
+
+</Project>

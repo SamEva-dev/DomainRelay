@@ -1,5 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
     <PackageId>DomainRelay.Abstractions</PackageId>
     <Description>Abstractions for DomainRelay (requests, handlers, mediator, pipeline behaviors).</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>

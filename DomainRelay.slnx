@@ -19,7 +19,29 @@
     <Project Path="src/DomainRelay.Validation/DomainRelay.Validation.csproj" />
     <Project Path="src/DomainRelay/DomainRelay.csproj" />
   </Folder>
+  <Folder Name="/src/benchmarks/">
+    <Project Path="src/Benchmarks/DomainRelay.Mapping.Benchmarks/DomainRelay.Mapping.Benchmarks.csproj" Id="5daee295-4444-4ab1-a170-4e7d6be928b3" />
+  </Folder>
+  <Folder Name="/src/Mapping/">
+    <Project Path="src/Mapping/DomainRelay.Mapping.Abstractions/DomainRelay.Mapping.Abstractions.csproj" Id="4d895e5e-43ff-48a4-aafb-5e437150b062" />
+    <Project Path="src/Mapping/DomainRelay.Mapping.DependencyInjection/DomainRelay.Mapping.DependencyInjection.csproj" Id="5ed62d4a-88e5-48b0-bd81-01b25ae4fed9" />
+    <Project Path="src/Mapping/DomainRelay.Mapping.Expressions/DomainRelay.Mapping.Expressions.csproj" Id="3a76560e-60d3-4e57-9315-3c908f5b0089" />
+    <Project Path="src/Mapping/DomainRelay.Mapping.SourceGen/DomainRelay.Mapping.SourceGen.csproj" Id="6f294c77-0a25-4aca-89a7-23d407fa0192" />
+    <Project Path="src/Mapping/DomainRelay.Mapping/DomainRelay.Mapping.csproj" Id="990c02a2-9aab-48ad-8035-5dda0f909737" />
+  </Folder>
+  <Folder Name="/src/Mapping/Samples/">
+    <Project Path="src/Mapping/Samples/DomainRelay.Mapping.Sample.AspNetCore/DomainRelay.Mapping.Sample.AspNetCore.csproj" Id="7fd275d8-ea0c-4723-8801-ff2d197f7b92" />
+    <Project Path="src/Mapping/Samples/DomainRelay.Mapping.Sample.AutoMapperMigration/DomainRelay.Mapping.Sample.AutoMapperMigration.csproj" Id="340af937-aa2f-4a3e-b1d1-4e5badd0c28b" />
+    <Project Path="src/Mapping/Samples/DomainRelay.Mapping.Sample.Console/DomainRelay.Mapping.Sample.Console.csproj" Id="9700ac4a-1b21-4ee1-8ca2-9bdbb4bb8bf3" />
+    <Project Path="src/Mapping/Samples/DomainRelay.Mapping.Sample.SourceGen/DomainRelay.Mapping.Sample.SourceGen.csproj" Id="9df52085-24cd-41aa-abfa-673f8f852208" />
+  </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/DomainRelay.Tests/DomainRelay.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tests/Mapping/">
+    <Project Path="tests/Mapping/DomainRelay.Mapping.DependencyInjection.Tests/DomainRelay.Mapping.DependencyInjection.Tests.csproj" Id="3ef6e347-7c3e-4fa2-8e88-ebd1e34a2315" />
+    <Project Path="tests/Mapping/DomainRelay.Mapping.Expressions.Tests/DomainRelay.Mapping.Expressions.Tests.csproj" Id="5bfb9fa7-cc2f-4d54-aa32-2ef45bcba5d7" />
+    <Project Path="tests/Mapping/DomainRelay.Mapping.SourceGen.Tests/DomainRelay.Mapping.SourceGen.Tests.csproj" Id="6ac580b3-d01e-404c-85cc-d673c4d74088" />
+    <Project Path="tests/Mapping/DomainRelay.Mapping.Tests/DomainRelay.Mapping.Tests.csproj" Id="106cc49d-2ec7-4e4f-a442-e4eccdff8509" />
   </Folder>
 </Solution>
