@@ -1,6 +1,7 @@
 ﻿using DomainRelay.Mapping.SourceGen.Models;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Collections.Generic;
 
 namespace DomainRelay.Mapping.SourceGen.Analysis;
 

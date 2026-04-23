@@ -7,6 +7,10 @@
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
 
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
     <!-- Default package version.
          Can still be overridden by /p:PackageVersion=... in CI -->
     <Version>0.10.0</Version>
@@ -21,6 +25,7 @@
 
     <!-- Quality / docs -->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 
     <!-- Optional if you want source link later -->

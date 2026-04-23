@@ -45,9 +45,21 @@ internal sealed class MappingValidator
 
     private static void ValidateMembers(TypeMap typeMap, List<string> errors)
     {
+        // If the map contains custom lifecycle actions, we can't reliably infer which members
+        // will be assigned. Don't block mapping execution in that case.
+        if (typeMap.BeforeMapActions.Count > 0 || typeMap.AfterMapActions.Count > 0)
+        {
+            return;
+        }
+
         var destinationProperties = typeMap.DestinationType
             .GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance)
             .Where(IsWritableMember)
+            .ToArray();
+
+        var sourceProperties = typeMap.SourceType
+            .GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance)
+            .Where(p => p.CanRead)
             .ToArray();
 
         var configuredMembers = typeMap.MemberMaps
@@ -92,14 +104,28 @@ internal sealed class MappingValidator
                 mappedMemberNames.Add(destinationProperty.Name);
                 continue;
             }
+
+            // Support simple unflattening (e.g. AddressCity -> Address.City).
+            // ObjectMapper applies unflattening at runtime based on source member name prefixes.
+            if (sourceProperties.Any(sp => sp.Name.StartsWith(destinationProperty.Name, StringComparison.OrdinalIgnoreCase)))
+            {
+                mappedMemberNames.Add(destinationProperty.Name);
+                continue;
+            }
         }
 
+        // If nothing can be mapped, only flag an error when the destination has non-nullable
+        // value-type members (can't be left as "default" safely in many cases).
         if (mappedMemberNames.Count == 0)
         {
             foreach (var destinationProperty in destinationProperties)
             {
-                errors.Add(
-                    $"Required destination member '{typeMap.DestinationType.FullName}.{destinationProperty.Name}' cannot be mapped by convention, flattening, or explicit configuration.");
+                var memberType = destinationProperty.PropertyType;
+                if (memberType.IsValueType && Nullable.GetUnderlyingType(memberType) is null)
+                {
+                    errors.Add(
+                        $"Required destination member '{typeMap.DestinationType.FullName}.{destinationProperty.Name}' cannot be mapped by convention, flattening, or explicit configuration.");
+                }
             }
         }
     }
