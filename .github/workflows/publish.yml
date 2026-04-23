@@ -93,7 +93,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      PACKAGE_VERSION: ${{ github.event.inputs.packageVersion }}
+      PACKAGE_VERSION: '3.0.0'
 
     steps:
       - name: Checkout
