@@ -1,4 +1,7 @@
-﻿namespace DomainRelay.Mapping.SourceGen.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace DomainRelay.Mapping.SourceGen.Models;
 
 internal sealed class GeneratedMappingModel
 {
