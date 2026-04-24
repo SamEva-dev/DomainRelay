@@ -14,20 +14,12 @@
     <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 
-    <NoWarn>$(NoWarn);RS2008;CS1591</NoWarn>
-
     <PackageId>DomainRelay.Mapping.SourceGen</PackageId>
-    <Version>0.10.0</Version>
-    <Authors>LocaGuest</Authors>
-    <Company>LocaGuest</Company>
     <Description>Source generator for simple DomainRelay.Mapping mappings.</Description>
-    <PackageTags>mapping source-generator domainrelay roslyn</PackageTags>
-    <RepositoryUrl>https://github.com/your-org/DomainRelay</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
+    <PackageTags>mapping;source-generator;domainrelay;roslyn</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Deterministic>true</Deterministic>
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+
+    <NoWarn>$(NoWarn);RS2008;CS1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,26 +28,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="obj2\**\*.cs" />
+    <None Include="$(OutputPath)$(AssemblyName).dll"
+          Pack="true"
+          PackagePath="analyzers/dotnet/cs"
+          Visible="false"
+          Condition="Exists('$(OutputPath)$(AssemblyName).dll')" />
+
+    <None Include="$(OutputPath)$(AssemblyName).pdb"
+          Pack="true"
+          PackagePath="analyzers/dotnet/cs"
+          Visible="false"
+          Condition="Exists('$(OutputPath)$(AssemblyName).pdb')" />
   </ItemGroup>
-
-  <Target Name="PackAnalyzerAssembly" BeforeTargets="GenerateNuspec">
-    <ItemGroup>
-      <None Include="$(TargetPath)"
-            Pack="true"
-            PackagePath="analyzers/dotnet/cs"
-            Visible="false" />
-
-      <None Include="$(TargetDir)$(AssemblyName).pdb"
-            Condition="Exists('$(TargetDir)$(AssemblyName).pdb')"
-            Pack="true"
-            PackagePath="analyzers/dotnet/cs"
-            Visible="false" />
-    </ItemGroup>
-  </Target>
 
 </Project>
