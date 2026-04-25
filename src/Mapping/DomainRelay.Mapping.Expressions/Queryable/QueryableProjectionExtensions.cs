@@ -1,6 +1,5 @@
-﻿using DomainRelay.Mapping.Abstractions.Projection;
-using System.Linq;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
+using DomainRelay.Mapping.Abstractions.Projection;
 
 namespace DomainRelay.Mapping.Expressions.Queryable;
 
@@ -10,6 +9,9 @@ public static class QueryableProjectionExtensions
         this IQueryable<TSource> source,
         IProjectionBuilder projectionBuilder)
     {
+        ArgumentNullException.ThrowIfNull(source);
+        ArgumentNullException.ThrowIfNull(projectionBuilder);
+
         var projection = projectionBuilder.BuildProjection<TSource, TDestination>();
         return System.Linq.Queryable.Select(source, projection);
     }
@@ -18,7 +20,11 @@ public static class QueryableProjectionExtensions
         this IQueryable source,
         IProjectionBuilder projectionBuilder)
     {
+        ArgumentNullException.ThrowIfNull(source);
+        ArgumentNullException.ThrowIfNull(projectionBuilder);
+
         var projection = projectionBuilder.BuildProjection(source.ElementType, typeof(TDestination));
+
         return source.Provider.CreateQuery<TDestination>(
             Expression.Call(
                 typeof(System.Linq.Queryable),

@@ -10,6 +10,10 @@ public static class QueryableTranslationExtensions
         Expression<Func<TDestination, bool>> destinationPredicate,
         IExpressionTranslator translator)
     {
+        ArgumentNullException.ThrowIfNull(source);
+        ArgumentNullException.ThrowIfNull(destinationPredicate);
+        ArgumentNullException.ThrowIfNull(translator);
+
         var translated = translator.Translate<TSource, TDestination, bool>(destinationPredicate);
         return source.Where(translated);
     }

@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\Mapping\DomainRelay.Mapping.Abstractions\DomainRelay.Mapping.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\src\Mapping\DomainRelay.Mapping.DependencyInjection\DomainRelay.Mapping.DependencyInjection.csproj" />
     <ProjectReference Include="..\..\..\src\Mapping\DomainRelay.Mapping\DomainRelay.Mapping.csproj" />
     <ProjectReference Include="..\..\..\src\Mapping\DomainRelay.Mapping.Expressions\DomainRelay.Mapping.Expressions.csproj" />
   </ItemGroup>
