@@ -3,6 +3,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
     <PackageId>DomainRelay.Validation</PackageId>
     <Description>FluentValidation pipeline behavior for DomainRelay.</Description>

@@ -2,24 +2,45 @@
 
 namespace DomainRelay.Publish;
 
+/// <summary>
+/// Defines how <see cref="ParallelPublishStrategy"/> handles handler failures.
+/// </summary>
 public enum ParallelPublishErrorMode
 {
-    /// <summary>Wait for all handlers; throw AggregateException if any failed.</summary>
+    /// <summary>
+    /// Waits for all handlers to complete and throws an <see cref="AggregateException"/>
+    /// when one or more handlers fail.
+    /// </summary>
     WaitAllAggregate,
 
-    /// <summary>Fail fast (first exception). Remaining tasks may still run.</summary>
+    /// <summary>
+    /// Observes handler completion and rethrows the first failed handler exception.
+    /// Remaining handlers may still continue running.
+    /// </summary>
     FailFast
 }
 
+/// <summary>
+/// Publishes notifications by invoking handlers concurrently.
+/// </summary>
+/// <remarks>
+/// This strategy is useful when notification handlers are independent and can safely run in parallel.
+/// Do not use this strategy when handlers depend on execution order or share non-thread-safe state.
+/// </remarks>
 public sealed class ParallelPublishStrategy : IPublishStrategy
 {
     private readonly ParallelPublishErrorMode _mode;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ParallelPublishStrategy"/> class.
+    /// </summary>
+    /// <param name="mode">The error handling mode used when one or more handlers fail.</param>
     public ParallelPublishStrategy(ParallelPublishErrorMode mode = ParallelPublishErrorMode.WaitAllAggregate)
     {
         _mode = mode;
     }
 
+    /// <inheritdoc />
     public async Task Publish<TNotification>(
         IReadOnlyList<INotificationHandler<TNotification>> handlers,
         TNotification notification,
@@ -32,18 +53,17 @@ public sealed class ParallelPublishStrategy : IPublishStrategy
 
         if (_mode == ParallelPublishErrorMode.FailFast)
         {
-            // Fail-fast: await tasks in completion order
             var remaining = tasks.ToList();
             while (remaining.Count > 0)
             {
                 var finished = await Task.WhenAny(remaining).ConfigureAwait(false);
                 remaining.Remove(finished);
-                await finished.ConfigureAwait(false); // throws if failed
+                await finished.ConfigureAwait(false);
             }
+
             return;
         }
 
-        // WaitAllAggregate
         try
         {
             await Task.WhenAll(tasks).ConfigureAwait(false);

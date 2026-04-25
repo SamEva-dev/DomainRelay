@@ -4,6 +4,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
     <PackageId>DomainRelay</PackageId>
     <Description>DomainRelay core mediator implementation.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>

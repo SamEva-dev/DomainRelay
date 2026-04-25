@@ -1,11 +1,33 @@
 ﻿namespace DomainRelay.Mapping.Abstractions.Exceptions;
 
-public sealed class MappingExecutionException : Exception
+/// <summary>
+/// Represents a failure that occurred while executing a mapping operation.
+/// </summary>
+public sealed class MappingExecutionException : MappingException
 {
+    /// <summary>
+    /// Gets the source type involved in the failed mapping operation.
+    /// </summary>
     public Type SourceType { get; }
+
+    /// <summary>
+    /// Gets the destination type involved in the failed mapping operation.
+    /// </summary>
     public Type DestinationType { get; }
+
+    /// <summary>
+    /// Gets the destination member name involved in the failure, when available.
+    /// </summary>
     public string? MemberName { get; }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="MappingExecutionException"/> class.
+    /// </summary>
+    /// <param name="message">The mapping error message.</param>
+    /// <param name="sourceType">The source type involved in the mapping.</param>
+    /// <param name="destinationType">The destination type involved in the mapping.</param>
+    /// <param name="memberName">The destination member name involved in the failure, when available.</param>
+    /// <param name="innerException">The inner exception.</param>
     public MappingExecutionException(
         string message,
         Type sourceType,

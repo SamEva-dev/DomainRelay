@@ -6,6 +6,19 @@ using DomainRelay.Options;
 
 namespace DomainRelay;
 
+/// <summary>
+/// Default implementation of <see cref="IMediator"/>.
+/// </summary>
+/// <remarks>
+/// <para>
+/// The mediator sends requests to exactly one request handler and publishes notifications
+/// to zero, one or many notification handlers.
+/// </para>
+/// <para>
+/// Handler wrappers are cached by request and response type, while handler instances are resolved
+/// from the configured <see cref="IServiceProvider"/> for each call.
+/// </para>
+/// </remarks>
 public sealed class Mediator : IMediator
 {
     private readonly IServiceProvider _sp;
@@ -13,12 +26,19 @@ public sealed class Mediator : IMediator
 
     private static readonly ConcurrentDictionary<(Type Req, Type Res), RequestHandlerWrapper> RequestWrappers = new();
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Mediator"/> class.
+    /// </summary>
+    /// <param name="sp">The service provider used to resolve handlers and pipeline behaviors.</param>
+    /// <param name="options">The DomainRelay runtime options.</param>
+    /// <exception cref="ArgumentNullException">Thrown when <paramref name="options"/> is <see langword="null"/>.</exception>
     public Mediator(IServiceProvider sp, DomainRelayOptions options)
     {
         _sp = sp;
         _options = options ?? throw new ArgumentNullException(nameof(options));
     }
 
+    /// <inheritdoc />
     public async Task<TResponse> Send<TResponse>(IRequest<TResponse> request, CancellationToken ct = default)
     {
         if (request is null) throw new ArgumentNullException(nameof(request));
@@ -43,6 +63,7 @@ public sealed class Mediator : IMediator
         }
     }
 
+    /// <inheritdoc />
     public async Task Send(IRequest request, CancellationToken ct = default)
     {
         if (request is null) throw new ArgumentNullException(nameof(request));
@@ -66,6 +87,7 @@ public sealed class Mediator : IMediator
         }
     }
 
+    /// <inheritdoc />
     public async Task Publish<TNotification>(TNotification notification, CancellationToken ct = default)
         where TNotification : INotification
     {
@@ -73,7 +95,6 @@ public sealed class Mediator : IMediator
 
         try
         {
-            // IMPORTANT: do NOT cache handler instances. Resolve each call.
             var obj = _sp.GetService(typeof(IEnumerable<INotificationHandler<TNotification>>));
             var handlers = obj as IEnumerable<INotificationHandler<TNotification>>
                 ?? Array.Empty<INotificationHandler<TNotification>>();

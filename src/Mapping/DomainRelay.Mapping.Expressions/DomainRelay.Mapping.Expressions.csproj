@@ -8,6 +8,8 @@
     <LangVersion>latest</LangVersion>
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    
     <PackageId>DomainRelay.Mapping.Expressions</PackageId>
     <Version>0.10.0</Version>
     <Authors>LocaGuest</Authors>

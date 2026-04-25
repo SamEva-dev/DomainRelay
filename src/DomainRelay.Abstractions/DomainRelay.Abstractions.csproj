@@ -4,6 +4,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
     <PackageId>DomainRelay.Abstractions</PackageId>
     <Description>Abstractions for DomainRelay (requests, handlers, mediator, pipeline behaviors).</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>

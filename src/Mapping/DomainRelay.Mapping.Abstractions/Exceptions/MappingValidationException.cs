@@ -1,15 +1,29 @@
 ﻿namespace DomainRelay.Mapping.Abstractions.Exceptions;
 
-public sealed class MappingValidationException : Exception
+/// <summary>
+/// Represents one or more mapping configuration validation errors.
+/// </summary>
+public sealed class MappingValidationException : MappingException
 {
+    /// <summary>
+    /// Gets the validation errors.
+    /// </summary>
     public IReadOnlyList<string> Errors { get; }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="MappingValidationException"/> class.
+    /// </summary>
+    /// <param name="error">The validation error.</param>
     public MappingValidationException(string error)
         : base(error)
     {
         Errors = new[] { error };
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="MappingValidationException"/> class.
+    /// </summary>
+    /// <param name="errors">The validation errors.</param>
     public MappingValidationException(IEnumerable<string> errors)
         : base(BuildMessage(errors))
     {
@@ -18,7 +32,8 @@ public sealed class MappingValidationException : Exception
 
     private static string BuildMessage(IEnumerable<string> errors)
     {
-        var errorList = errors?.Where(e => !string.IsNullOrWhiteSpace(e)).ToArray() ?? Array.Empty<string>();
+        var errorList = errors?.Where(e => !string.IsNullOrWhiteSpace(e)).ToArray()
+                        ?? Array.Empty<string>();
 
         if (errorList.Length == 0)
         {

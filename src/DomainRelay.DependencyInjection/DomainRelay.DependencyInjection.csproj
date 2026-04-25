@@ -4,6 +4,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
     <PackageId>DomainRelay.DependencyInjection</PackageId>
     <Description>Microsoft.Extensions.DependencyInjection integration for DomainRelay.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
