@@ -1,5 +1,7 @@
-﻿using System.Linq.Expressions;
+using System.Linq.Expressions;
+using DomainRelay.Mapping.Abstractions.Exceptions;
 using DomainRelay.Mapping.Abstractions.Projection;
+using DomainRelay.Mapping.Expressions.Translation;
 
 namespace DomainRelay.Mapping.Expressions.Queryable;
 
@@ -14,7 +16,19 @@ public static class QueryableTranslationExtensions
         ArgumentNullException.ThrowIfNull(destinationPredicate);
         ArgumentNullException.ThrowIfNull(translator);
 
-        var translated = translator.Translate<TSource, TDestination, bool>(destinationPredicate);
-        return source.Where(translated);
+        try
+        {
+            var translated = translator.Translate<TSource, TDestination, bool>(destinationPredicate);
+            return source.Where(translated);
+        }
+        catch (TranslationValidationException ex)
+        {
+            throw new ExpressionTranslationException(
+                typeof(TSource),
+                typeof(TDestination),
+                ex.Message,
+                ex,
+                destinationPredicate.ToString());
+        }
     }
 }

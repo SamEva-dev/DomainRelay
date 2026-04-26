@@ -1,4 +1,6 @@
-﻿using DomainRelay.Mapping.Abstractions.Exceptions;
+using System.Linq.Expressions;
+using DomainRelay.Mapping.Abstractions.Exceptions;
+using DomainRelay.Mapping.Expressions.Translation;
 
 namespace DomainRelay.Mapping.Expressions.Projection;
 
@@ -24,6 +26,13 @@ internal sealed class ProjectionValidator
                 continue;
             }
 
+            if (!IsProjectable(member.SourceExpressionBody))
+            {
+                errors.Add(
+                    $"Member '{plan.DestinationType.FullName}.{member.DestinationMemberName}' uses a non-projectable source expression.");
+                continue;
+            }
+
             var destinationType = member.DestinationProperty.PropertyType;
             var sourceExpressionType = member.SourceExpressionBody.Type;
 
@@ -37,8 +46,45 @@ internal sealed class ProjectionValidator
 
         if (plan.Constructor is null && !HasPublicParameterlessConstructor(plan.DestinationType))
         {
-            errors.Add(
-                $"Destination type '{plan.DestinationType.FullName}' has no public parameterless constructor and no resolvable constructor for projection.");
+            var constructor = plan.DestinationType
+                .GetConstructors(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance)
+                .OrderByDescending(c => c.GetParameters().Length)
+                .FirstOrDefault();
+
+            if (constructor is null)
+            {
+                errors.Add(
+                    $"Destination type '{plan.DestinationType.FullName}' has no public parameterless constructor and no resolvable constructor for projection.");
+            }
+            else
+            {
+                foreach (var parameter in constructor.GetParameters())
+                {
+                    var member = plan.Members.FirstOrDefault(m =>
+                        string.Equals(m.DestinationMemberName, parameter.Name, StringComparison.OrdinalIgnoreCase));
+
+                    if (member?.SourceExpressionBody is null)
+                    {
+                        errors.Add(
+                            $"Constructor parameter '{parameter.Name}' on '{plan.DestinationType.FullName}' is missing a projectable source expression.");
+                        continue;
+                    }
+
+                    if (!IsProjectable(member.SourceExpressionBody))
+                    {
+                        errors.Add(
+                            $"Constructor parameter '{parameter.Name}' on '{plan.DestinationType.FullName}' uses a non-projectable source expression.");
+                        continue;
+                    }
+
+                    if (!parameter.ParameterType.IsAssignableFrom(member.SourceExpressionBody.Type) &&
+                        !CanUseExpressionConvert(member.SourceExpressionBody.Type, parameter.ParameterType))
+                    {
+                        errors.Add(
+                            $"Constructor parameter '{parameter.Name}' on '{plan.DestinationType.FullName}' cannot be projected from '{member.SourceExpressionBody.Type.FullName}' to '{parameter.ParameterType.FullName}'.");
+                    }
+                }
+            }
         }
 
         if (plan.Constructor is not null)
@@ -52,6 +98,13 @@ internal sealed class ProjectionValidator
                 {
                     errors.Add(
                         $"Constructor parameter '{parameter.Name}' on '{plan.DestinationType.FullName}' has no projectable source expression.");
+                    continue;
+                }
+
+                if (!IsProjectable(member.SourceExpressionBody))
+                {
+                    errors.Add(
+                        $"Constructor parameter '{parameter.Name}' on '{plan.DestinationType.FullName}' uses a non-projectable source expression.");
                     continue;
                 }
 
@@ -76,6 +129,23 @@ internal sealed class ProjectionValidator
     private static bool HasPublicParameterlessConstructor(Type type)
     {
         return type.GetConstructor(Type.EmptyTypes) is not null;
+    }
+
+    private static bool IsProjectable(Expression sourceExpressionBody)
+    {
+        var rootParameter = ExpressionParameterFinder.FindRootParameter(sourceExpressionBody);
+
+        try
+        {
+            new ExpressionTranslationValidator().Validate(
+                Expression.Lambda(sourceExpressionBody, rootParameter));
+
+            return true;
+        }
+        catch (TranslationValidationException)
+        {
+            return false;
+        }
     }
 
     private static bool CanUseExpressionConvert(Type sourceType, Type destinationType)
