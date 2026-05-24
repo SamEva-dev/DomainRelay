@@ -12,6 +12,8 @@ internal static class TypeHelper
                || actualType == typeof(decimal)
                || actualType == typeof(DateTime)
                || actualType == typeof(DateTimeOffset)
+               || actualType == typeof(DateOnly)
+               || actualType == typeof(TimeOnly)
                || actualType == typeof(Guid)
                || actualType == typeof(TimeSpan);
     }
