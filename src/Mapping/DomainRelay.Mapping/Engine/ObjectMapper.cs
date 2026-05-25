@@ -175,6 +175,11 @@ internal sealed class ObjectMapper : IObjectMapper
             destinationType = inheritanceResolution.Value.DestinationType;
         }
 
+        if (destinationType.IsAssignableFrom(source.GetType()))
+        {
+            return source;
+        }
+
         if (context.TryGetVisited(source, destinationType, out var existing))
         {
             return existing;
@@ -262,6 +267,11 @@ internal sealed class ObjectMapper : IObjectMapper
 
     private object? MapWithContext(object source, object destination, Type sourceType, Type destinationType, MappingContext context)
     {
+        if (destinationType.IsAssignableFrom(source.GetType()))
+        {
+            return source;
+        }
+
         if (_dictionaryMapper.CanMap(sourceType, destinationType))
         {
             return _dictionaryMapper.MapDictionary(
