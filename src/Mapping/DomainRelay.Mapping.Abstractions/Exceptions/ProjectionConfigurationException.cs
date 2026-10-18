@@ -1,11 +1,16 @@
 ﻿namespace DomainRelay.Mapping.Abstractions.Exceptions;
 
+/// <summary>Reports invalid projection mapping configuration.</summary>
 public sealed class ProjectionConfigurationException : MappingException
 {
+    /// <summary>Gets the source model type.</summary>
     public Type SourceType { get; }
+    /// <summary>Gets the destination model type.</summary>
     public Type DestinationType { get; }
+    /// <summary>Gets the reported configuration errors.</summary>
     public IReadOnlyList<string> Errors { get; }
 
+    /// <summary>Initializes a mapping error with its source and destination context.</summary>
     public ProjectionConfigurationException(
         Type sourceType,
         Type destinationType,
@@ -18,6 +23,7 @@ public sealed class ProjectionConfigurationException : MappingException
                  ?? Array.Empty<string>();
     }
 
+    /// <summary>Initializes a mapping error with its source and destination context.</summary>
     public ProjectionConfigurationException(
         Type sourceType,
         Type destinationType,

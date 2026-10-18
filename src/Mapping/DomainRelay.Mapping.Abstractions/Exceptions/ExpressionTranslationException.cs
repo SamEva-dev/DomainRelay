@@ -1,11 +1,16 @@
 ﻿namespace DomainRelay.Mapping.Abstractions.Exceptions;
 
+/// <summary>Reports failure to translate an expression between mapped types.</summary>
 public sealed class ExpressionTranslationException : MappingException
 {
+    /// <summary>Gets the source model type.</summary>
     public Type SourceType { get; }
+    /// <summary>Gets the destination model type.</summary>
     public Type DestinationType { get; }
+    /// <summary>Gets the optional expression involved in the translation failure.</summary>
     public string? ExpressionText { get; }
 
+    /// <summary>Initializes a mapping error with its source and destination context.</summary>
     public ExpressionTranslationException(
         Type sourceType,
         Type destinationType,
@@ -18,6 +23,7 @@ public sealed class ExpressionTranslationException : MappingException
         ExpressionText = expressionText;
     }
 
+    /// <summary>Initializes a mapping error with its source and destination context.</summary>
     public ExpressionTranslationException(
         Type sourceType,
         Type destinationType,
